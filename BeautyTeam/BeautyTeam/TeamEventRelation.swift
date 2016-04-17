@@ -8,8 +8,25 @@
 
 import Foundation
 
+// EU_Relation
 class TeamEventRelation: InitialProtocol {
+    var teamEventRelationId: Int!
+    var groupEventEventId: Int!
+    var obisoftUserId: String!
+    
     required init(rawData: [String : AnyObject?]) {
-        //
+        guard let teamEventRelationId = rawData["TU_RelationId"] as? Int else {
+            fatalError()
+        }
+        guard let groupEventEventId = rawData["GroupEventEventId"] as? Int else {
+            fatalError()
+        }
+        guard let obisoftUserId = rawData["ObisoftUserId"] as? String else {
+            fatalError()
+        }
+        
+        self.teamEventRelationId = teamEventRelationId
+        self.groupEventEventId = groupEventEventId
+        self.obisoftUserId = obisoftUserId
     }
 }

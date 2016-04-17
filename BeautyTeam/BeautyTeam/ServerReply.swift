@@ -8,6 +8,13 @@
 
 import Foundation
 
-class ServerReply: NSObject {
-    var statusCode: String?
+class ServerReply: InitialProtocol {
+    var statusCode: Int!
+    
+    required init(rawData: [String : AnyObject?]) {
+        guard let statusCode = rawData["StatusCode"] as? Int else {
+            fatalError()
+        }
+        self.statusCode = statusCode
+    }
 }

@@ -9,10 +9,10 @@
 import UIKit
 
 class Task: INoticable {
-    var taskID: Int?
-    var taskName: String?
-    var taskContent: String?
-    var deadline: String?
+    var taskID: Int!
+    var taskName: String!
+    var taskContent: String!
+    var deadline: String!
     
     required init(rawData: [String : AnyObject?]) {
         super.init(rawData: rawData)

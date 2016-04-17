@@ -10,7 +10,12 @@ import Foundation
 
 class PersonalTask: Task {
     var obisoftUserId: String?
-    var obisoftUser: ObisoftUser?
     
-    
+    required init(rawData: [String : AnyObject?]) {
+        super.init(rawData: rawData)
+        guard let obisoftUserId = rawData["ObisoftUserId"] as? String else {
+            fatalError()
+        }
+        self.obisoftUserId = obisoftUserId
+    }
 }
