@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
+		1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDB1CC0946800A59F92 /* ServerReply.swift */; };
+		1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDD1CC0D91700A59F92 /* INoticable.swift */; };
+		1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BE01CC0D9BB00A59F92 /* Event.swift */; };
+		1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7061CC1E7F200A5E9BF /* Task.swift */; };
+		1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7091CC1E86B00A5E9BF /* Group.swift */; };
+		1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F70C1CC1E9FD00A5E9BF /* GroupUserRelation.swift */; };
+		1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F70E1CC1EA5400A5E9BF /* InitialProtocol.swift */; };
+		1DC1F7111CC1EB9600A5E9BF /* ObisoftUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7101CC1EB9600A5E9BF /* ObisoftUser.swift */; };
+		1DC1F7131CC1ED5C00A5E9BF /* TeamUserRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7121CC1ED5C00A5E9BF /* TeamUserRelation.swift */; };
+		1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */; };
+		1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7161CC1EE4A00A5E9BF /* PersonalTask.swift */; };
+		1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7181CC1EED600A5E9BF /* PersonalEvent.swift */; };
 		1DDFB4711CAA218700124835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4701CAA218700124835 /* AppDelegate.swift */; };
 		1DDFB4731CAA218700124835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4721CAA218700124835 /* ViewController.swift */; };
 		1DDFB4761CAA218700124835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDFB4741CAA218700124835 /* Main.storyboard */; };
@@ -39,6 +51,18 @@
 /* Begin PBXFileReference section */
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
+		1D528BDB1CC0946800A59F92 /* ServerReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerReply.swift; sourceTree = "<group>"; };
+		1D528BDD1CC0D91700A59F92 /* INoticable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INoticable.swift; sourceTree = "<group>"; };
+		1D528BE01CC0D9BB00A59F92 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1DC1F7061CC1E7F200A5E9BF /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1DC1F7091CC1E86B00A5E9BF /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		1DC1F70C1CC1E9FD00A5E9BF /* GroupUserRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelation.swift; sourceTree = "<group>"; };
+		1DC1F70E1CC1EA5400A5E9BF /* InitialProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialProtocol.swift; sourceTree = "<group>"; };
+		1DC1F7101CC1EB9600A5E9BF /* ObisoftUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObisoftUser.swift; sourceTree = "<group>"; };
+		1DC1F7121CC1ED5C00A5E9BF /* TeamUserRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamUserRelation.swift; sourceTree = "<group>"; };
+		1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamEventRelation.swift; sourceTree = "<group>"; };
+		1DC1F7161CC1EE4A00A5E9BF /* PersonalTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTask.swift; sourceTree = "<group>"; };
+		1DC1F7181CC1EED600A5E9BF /* PersonalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalEvent.swift; sourceTree = "<group>"; };
 		1DDFB46D1CAA218700124835 /* BeautyTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDFB4701CAA218700124835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DDFB4721CAA218700124835 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +116,88 @@
 			name = BeautyTeamDebug;
 			sourceTree = "<group>";
 		};
+		1D40B19D1CB8F52E00E3166E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1D40B19E1CB8F53800E3166E /* Notice */,
+				1D40B19F1CB8F54E00E3166E /* Team */,
+				1D40B1A01CB8F55900E3166E /* Main */,
+				1D40B1A11CB8F6FD00E3166E /* etc */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		1D40B19E1CB8F53800E3166E /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Notice;
+			sourceTree = "<group>";
+		};
+		1D40B19F1CB8F54E00E3166E /* Team */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
+		1D40B1A01CB8F55900E3166E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		1D40B1A11CB8F6FD00E3166E /* etc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = etc;
+			sourceTree = "<group>";
+		};
+		1D528BDA1CC0928200A59F92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1F70B1CC1E97D00A5E9BF /* Relationship */,
+				1DC1F7081CC1E85B00A5E9BF /* Team */,
+				1D528BDF1CC0D97200A59F92 /* Notice */,
+				1D528BDB1CC0946800A59F92 /* ServerReply.swift */,
+				1DC1F70E1CC1EA5400A5E9BF /* InitialProtocol.swift */,
+				1DC1F7101CC1EB9600A5E9BF /* ObisoftUser.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1D528BDF1CC0D97200A59F92 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				1D528BDD1CC0D91700A59F92 /* INoticable.swift */,
+				1D528BE01CC0D9BB00A59F92 /* Event.swift */,
+				1DC1F7061CC1E7F200A5E9BF /* Task.swift */,
+				1DC1F7161CC1EE4A00A5E9BF /* PersonalTask.swift */,
+				1DC1F7181CC1EED600A5E9BF /* PersonalEvent.swift */,
+			);
+			name = Notice;
+			sourceTree = "<group>";
+		};
+		1DC1F7081CC1E85B00A5E9BF /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1F7091CC1E86B00A5E9BF /* Group.swift */,
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
+		1DC1F70B1CC1E97D00A5E9BF /* Relationship */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1F70C1CC1E9FD00A5E9BF /* GroupUserRelation.swift */,
+				1DC1F7121CC1ED5C00A5E9BF /* TeamUserRelation.swift */,
+				1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */,
+			);
+			name = Relationship;
+			sourceTree = "<group>";
+		};
 		1DDFB4641CAA218700124835 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +225,8 @@
 		1DDFB46F1CAA218700124835 /* BeautyTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1D528BDA1CC0928200A59F92 /* Models */,
+				1D40B19D1CB8F52E00E3166E /* Modules */,
 				1DDFB4701CAA218700124835 /* AppDelegate.swift */,
 				1DDFB4721CAA218700124835 /* ViewController.swift */,
 				1DDFB4741CAA218700124835 /* Main.storyboard */,
@@ -350,10 +458,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC1F7131CC1ED5C00A5E9BF /* TeamUserRelation.swift in Sources */,
+				1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */,
+				1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */,
+				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
+				1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */,
 				1DDFB4791CAA218700124835 /* BeautyTeam.xcdatamodeld in Sources */,
 				1DDFB4731CAA218700124835 /* ViewController.swift in Sources */,
+				1DC1F7111CC1EB9600A5E9BF /* ObisoftUser.swift in Sources */,
 				1DDFB4711CAA218700124835 /* AppDelegate.swift in Sources */,
+				1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */,
+				1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */,
 				1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */,
+				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
+				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
+				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
+				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

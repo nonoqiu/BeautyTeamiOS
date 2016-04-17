@@ -9,14 +9,15 @@
 import Foundation
 import Alamofire
 
-let manager: Manager = {
-    let serverTrustPolicies: [String: ServerTrustPolicy] = [
-        "www.obisoft.com.cn": .DisableEvaluation
-    ]
-    
-    let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-    configuration.HTTPAdditionalHeaders = Alamofire.Manager.defaultHTTPHeaders
-    
-    return Alamofire.Manager(configuration: configuration,
-                             serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies))
-}()
+// Deprecated
+//let manager: Manager = {
+//    let serverTrustPolicies: [String: ServerTrustPolicy] = [
+//        "www.obisoft.com.cn": .DisableEvaluation
+//    ]
+//    
+//    let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+//    configuration.HTTPAdditionalHeaders = Alamofire.Manager.defaultHTTPHeaders
+//    
+//    return Alamofire.Manager(configuration: configuration,
+//                             serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies))
+//}()
