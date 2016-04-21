@@ -27,8 +27,14 @@ class NoticeRightNavigationItemPopMenu: UITableView, UITableViewDataSource, UITa
         super.init(frame: frame, style: style)
         
         self.personalTaskCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+//        personalTaskCell?.backgroundColor = UIColor.blackColor()
         self.personalEventCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        personalEventCell?.backgroundColor = UIColor.blackColor()
         self.importCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+//        importCell?.backgroundColor = UIColor.blackColor()
+        
+        self.dataSource = self
+        self.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +46,7 @@ class NoticeRightNavigationItemPopMenu: UITableView, UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

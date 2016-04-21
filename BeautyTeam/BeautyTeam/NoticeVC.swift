@@ -14,7 +14,7 @@ class NoticeVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+//        self.view.backgroundColor = UIColor.whiteColor()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,9 +24,20 @@ class NoticeVC: UITableViewController {
         self.navigationItem.title = "BeautyTeam"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addButtonPress))
         
-        self.rightNavigationPopItem = NoticeRightNavigationItemPopMenu(frame: CGRectMake(ObiBeautyTeam.deviceWidth - 60 - 60, 66, 60, 100), style: .Plain)
+        self.rightNavigationPopItem = NoticeRightNavigationItemPopMenu(frame: CGRectMake(ObiBeautyTeam.deviceWidth - 120, 0, 120, 200), style: .Plain)
         self.rightNavigationPopItem?.hidden = true
+        self.rightNavigationPopItem?.jumpDelegate = self
+        self.rightNavigationPopItem?.layer.borderWidth = 1
+        self.rightNavigationPopItem?.layer.borderColor = UIColor.greenColor().CGColor
+        self.rightNavigationPopItem?.layer.cornerRadius = 4
+        
+        // Listener to collapse down menu
+//        let listener = UITapGestureRecognizer(target: self, action: #selector(collapseDownMenu))
+//        listener.numberOfTapsRequired = 1
+//        listener.numberOfTouchesRequired = 1
+        
         self.view.addSubview(rightNavigationPopItem!)
+//        self.tableView.addGestureRecognizer(listener)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +47,15 @@ class NoticeVC: UITableViewController {
     
     func addButtonPress() {
         // Define Down Menu
-        self.rightNavigationPopItem?.hidden = false
+        if self.rightNavigationPopItem!.hidden {
+            self.rightNavigationPopItem!.hidden = false
+        } else {
+            self.rightNavigationPopItem!.hidden = true
+        }
+    }
+    
+    func collapseDownMenu() {
+        self.rightNavigationPopItem?.hidden = true
     }
 
     // MARK: - Table view data source
@@ -49,6 +68,10 @@ class NoticeVC: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        collapseDownMenu()
     }
 
     /*

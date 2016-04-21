@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
     var loginVC: ObiLoginVC?
@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var noticeVC: NoticeVC?
     var teamVC: TeamVC?
     var mainVC: MainVC?
+    
+    var tabBarController: UITabBarController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,15 +39,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let teamNC = UINavigationController(rootViewController: teamVC!)
         let mainNC = UINavigationController(rootViewController: mainVC!)
         
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [UIViewController]()
-        tabBarController.viewControllers?.append(noticeNC)
-        tabBarController.viewControllers?.append(teamNC)
-        tabBarController.viewControllers?.append(mainNC)
+//        let tabBarController = UITabBarController()
+        self.tabBarController = UITabBarController()
         
+        guard let noticeLogo = UIImage(named: "NoticeLogo") else {
+            fatalError("Notice logo not found")
+        }
+        guard let teamLogo = UIImage(named: "TeamLogo") else {
+            fatalError("Team logo not found")
+        }
+        guard let mainLogo = UIImage(named: "MainLogo") else {
+            fatalError("Main logo not found")
+        }
+        
+        guard let noticeLogo_sel = UIImage(named: "NoticeLogo-selected") else {
+            fatalError("Notice logo selected not found")
+        }
+        guard let teamLogo_sel = UIImage(named: "TeamLogo-selected") else {
+            fatalError("Team logo selected not found")
+        }
+        guard let mainLogo_sel = UIImage(named: "MainLogo-selected") else {
+            fatalError("Main logo selected not found")
+        }
+        
+        let noticeVCTabBarItem = UITabBarItem(title: "Notice", image: noticeLogo, selectedImage: noticeLogo_sel)
+        let teamVCTabBarItem = UITabBarItem(title: "Team", image: teamLogo, selectedImage: teamLogo_sel)
+        let mainVCTabBarItem = UITabBarItem(title: "Main", image: mainLogo, selectedImage: mainLogo_sel)
+        // TODO: 改变字体选中颜色
+        
+        noticeVC!.tabBarItem = UITabBarItem(tabBarSystemItem: .Bookmarks, tag: 0)
+        teamVC!.tabBarItem = UITabBarItem(tabBarSystemItem: .Contacts, tag: 1)
+        mainVC!.tabBarItem = UITabBarItem(tabBarSystemItem: .Downloads, tag: 2)
+        
+//        tabBarController!.viewControllers = [UIViewController]()
+//        tabBarController!.viewControllers?.append(noticeNC)
+//        tabBarController!.viewControllers?.append(teamNC)
+//        tabBarController!.viewControllers?.append(mainNC)
+        
+        tabBarController?.addChildViewController(noticeNC)
+        tabBarController?.addChildViewController(teamNC)
+        tabBarController?.addChildViewController(mainNC)
+        
+        self.tabBarController?.delegate = self
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = tabBarController
+//        self.window?.addSubview(tabBarController!.view)
         self.window?.makeKeyAndVisible()
         
         return true
