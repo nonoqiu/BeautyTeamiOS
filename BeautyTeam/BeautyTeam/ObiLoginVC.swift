@@ -198,6 +198,7 @@ class ObiLoginVC: UITableViewController {
                         UIAlertView(title: "Sign in Failed", message: "The account Requires Verification.", delegate: nil, cancelButtonTitle: "OK").show()
                     default:
                         UIAlertView(title: "Sign in Failed", message: "\(data.statusCode) Unknown Error.\nThe error will be logged to Obisoft.", delegate: nil, cancelButtonTitle: "OK").show()
+                        ObiBeautyTeam.logError("\(data.statusCode) in login")
                     }
                 }
                 
