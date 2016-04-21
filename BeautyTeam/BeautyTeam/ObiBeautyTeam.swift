@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import KeychainSwift
 
 struct ObiBeautyTeam {
     
@@ -36,6 +37,18 @@ struct ObiBeautyTeam {
                 response in
                 
                 print(response.result.value)
+        }
+    }
+    
+    static var deviceWidth: CGFloat {
+        get {
+            return UIScreen.mainScreen().bounds.width
+        }
+    }
+    
+    static var deviceHeight: CGFloat {
+        get {
+            return UIScreen.mainScreen().bounds.height
         }
     }
     

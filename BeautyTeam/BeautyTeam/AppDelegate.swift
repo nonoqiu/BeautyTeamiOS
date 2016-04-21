@@ -14,13 +14,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var loginVC: ObiLoginVC?
+    
+    var noticeVC: NoticeVC?
+    var teamVC: TeamVC?
+    var mainVC: MainVC?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Debug
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.loginVC = ObiLoginVC(style: .Grouped)
+//        self.window?.rootViewController = UINavigationController(rootViewController: loginVC!)
+//        self.window?.makeKeyAndVisible()
+        
+        // Load tabs
+        self.noticeVC = NoticeVC(style: .Grouped)
+        self.teamVC = TeamVC(style: .Grouped)
+        self.mainVC = MainVC(style: .Grouped)
+        
+        let noticeNC = UINavigationController(rootViewController: noticeVC!)
+        let teamNC = UINavigationController(rootViewController: teamVC!)
+        let mainNC = UINavigationController(rootViewController: mainVC!)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [UIViewController]()
+        tabBarController.viewControllers?.append(noticeNC)
+        tabBarController.viewControllers?.append(teamNC)
+        tabBarController.viewControllers?.append(mainNC)
+        
+        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.loginVC = ObiLoginVC(style: .Grouped)
-        self.window?.rootViewController = UINavigationController(rootViewController: loginVC!)
+        self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
+        
         return true
     }
 
