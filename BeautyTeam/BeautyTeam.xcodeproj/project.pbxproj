@@ -18,6 +18,9 @@
 		1D56DB231CC7783900E0F3BA /* ObiValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB221CC7783900E0F3BA /* ObiValue.swift */; };
 		1D56DB251CC778C100E0F3BA /* ObiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB241CC778C100E0F3BA /* ObiObject.swift */; };
 		1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB261CC7797C00E0F3BA /* AuthModel.swift */; };
+		1D56DB291CC77E4200E0F3BA /* ObiLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB281CC77E4200E0F3BA /* ObiLoginVC.swift */; };
+		1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */; };
+		1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */; };
 		1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7061CC1E7F200A5E9BF /* Task.swift */; };
 		1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7091CC1E86B00A5E9BF /* Group.swift */; };
 		1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F70C1CC1E9FD00A5E9BF /* GroupUserRelation.swift */; };
@@ -71,6 +74,9 @@
 		1D56DB221CC7783900E0F3BA /* ObiValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiValue.swift; sourceTree = "<group>"; };
 		1D56DB241CC778C100E0F3BA /* ObiObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiObject.swift; sourceTree = "<group>"; };
 		1D56DB261CC7797C00E0F3BA /* AuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		1D56DB281CC77E4200E0F3BA /* ObiLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiLoginVC.swift; sourceTree = "<group>"; };
+		1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiBeautyTeam.swift; sourceTree = "<group>"; };
 		1DC1F7061CC1E7F200A5E9BF /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		1DC1F7091CC1E86B00A5E9BF /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		1DC1F70C1CC1E9FD00A5E9BF /* GroupUserRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelation.swift; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 		1DC93B2D1CC35996007214DE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1D56DB281CC77E4200E0F3BA /* ObiLoginVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +295,8 @@
 				1DDFB4771CAA218700124835 /* BeautyTeam.xcdatamodeld */,
 				1D56DB221CC7783900E0F3BA /* ObiValue.swift */,
 				1D56DB241CC778C100E0F3BA /* ObiObject.swift */,
+				1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */,
+				1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */,
 			);
 			path = BeautyTeam;
 			sourceTree = "<group>";
@@ -398,7 +407,7 @@
 				TargetAttributes = {
 					1DDFB46C1CAA218700124835 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = XFDV5Y8EL3;
+						DevelopmentTeam = RPT45K2VK4;
 					};
 					1DDFB4831CAA218700124835 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -520,10 +529,12 @@
 				1DC93B281CC3462B007214DE /* GroupEvent.swift in Sources */,
 				1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */,
 				1DC93B261CC345B7007214DE /* Project.swift in Sources */,
+				1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */,
 				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
 				1D56DB231CC7783900E0F3BA /* ObiValue.swift in Sources */,
 				1D56DB251CC778C100E0F3BA /* ObiObject.swift in Sources */,
 				1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */,
+				1D56DB291CC77E4200E0F3BA /* ObiLoginVC.swift in Sources */,
 				1DDFB4791CAA218700124835 /* BeautyTeam.xcdatamodeld in Sources */,
 				1DDFB4731CAA218700124835 /* ViewController.swift in Sources */,
 				1DC1F7111CC1EB9600A5E9BF /* ObisoftUser.swift in Sources */,
@@ -533,6 +544,7 @@
 				1DC93B2A1CC34678007214DE /* GroupTask.swift in Sources */,
 				1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */,
 				1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */,
+				1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */,
 				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
@@ -679,6 +691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BeautyTeam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -695,6 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BeautyTeam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
