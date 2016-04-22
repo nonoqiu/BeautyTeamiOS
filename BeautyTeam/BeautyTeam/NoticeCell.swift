@@ -10,7 +10,7 @@ import UIKit
 
 class NoticeCell: UITableViewCell {
     
-    var headerImage: UIImage?
+    var headerImage: UIImageView?
     
 
     override func awakeFromNib() {
