@@ -38,8 +38,7 @@ class ObiLoginVC: UITableViewController {
         self.loginCell.textLabel?.text = "Sign in"
         
         self.navigationItem.title = "Sign in"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem()
-        self.navigationItem.rightBarButtonItem?.customView = self.loginIndicate
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.loginIndicate)
         self.loginIndicate.stopAnimating()
     }
 

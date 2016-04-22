@@ -52,4 +52,6 @@ struct ObiBeautyTeam {
         }
     }
     
+    static var defaultRowHeight: CGFloat = UITableView().rowHeight
+    
 }

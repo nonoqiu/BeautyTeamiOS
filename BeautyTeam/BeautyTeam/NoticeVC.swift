@@ -24,7 +24,7 @@ class NoticeVC: UITableViewController {
         self.navigationItem.title = "BeautyTeam"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addButtonPress))
         
-        self.rightNavigationPopItem = NoticeRightNavigationItemPopMenu(frame: CGRectMake(ObiBeautyTeam.deviceWidth - 120, 0, 120, 200), style: .Plain)
+        self.rightNavigationPopItem = NoticeRightNavigationItemPopMenu(frame: CGRectMake(ObiBeautyTeam.deviceWidth - 200, 0, 200, NoticeRightNavigationItemPopMenu.itemHeight * 3), style: .Plain)
         self.rightNavigationPopItem?.hidden = true
         self.rightNavigationPopItem?.jumpDelegate = self
         self.rightNavigationPopItem?.layer.borderWidth = 1

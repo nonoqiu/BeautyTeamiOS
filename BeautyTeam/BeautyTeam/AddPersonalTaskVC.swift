@@ -12,7 +12,7 @@ class AddPersonalTaskVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Add Personal Task"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

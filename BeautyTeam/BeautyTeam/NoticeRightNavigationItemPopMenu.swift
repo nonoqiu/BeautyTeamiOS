@@ -14,6 +14,8 @@ class NoticeRightNavigationItemPopMenu: UITableView, UITableViewDataSource, UITa
     var personalTaskCell: UITableViewCell?
     var personalEventCell: UITableViewCell?
     var importCell: UITableViewCell?
+    
+    static var itemHeight: CGFloat = 60
 
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -27,12 +29,15 @@ class NoticeRightNavigationItemPopMenu: UITableView, UITableViewDataSource, UITa
         super.init(frame: frame, style: style)
         
         self.personalTaskCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        self.personalTaskCell?.textLabel?.text = "Add Personal Task"
 //        personalTaskCell?.backgroundColor = UIColor.blackColor()
         self.personalEventCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
-        personalEventCell?.backgroundColor = UIColor.blackColor()
+        self.personalEventCell?.textLabel?.text = "Add Personal Event"
         self.importCell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        self.importCell?.textLabel?.text = "Import"
 //        importCell?.backgroundColor = UIColor.blackColor()
-        
+        self.contentSize.height = 0
+        self.separatorStyle = .None
         self.dataSource = self
         self.delegate = self
     }
@@ -77,5 +82,9 @@ class NoticeRightNavigationItemPopMenu: UITableView, UITableViewDataSource, UITa
             break
         }
     }
-
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return NoticeRightNavigationItemPopMenu.itemHeight
+    }
+    
 }
