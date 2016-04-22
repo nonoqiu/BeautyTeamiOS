@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
+		1D3E7EAE1CCA746900D12251 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */; };
+		1D3E7EB01CCA747700D12251 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EAF1CCA747700D12251 /* ElementCell.swift */; };
+		1D3E7EB21CCA748900D12251 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EB11CCA748900D12251 /* HeaderCell.swift */; };
 		1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */; };
 		1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D321CC3329900868A68 /* RadioStation.swift */; };
 		1D4C4D351CC3337200868A68 /* RadioTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D341CC3337200868A68 /* RadioTask.swift */; };
@@ -71,6 +74,9 @@
 /* Begin PBXFileReference section */
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
+		1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
+		1D3E7EAF1CCA747700D12251 /* ElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
+		1D3E7EB11CCA748900D12251 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelationType.swift; sourceTree = "<group>"; };
 		1D4C4D321CC3329900868A68 /* RadioStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
 		1D4C4D341CC3337200868A68 /* RadioTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTask.swift; sourceTree = "<group>"; };
@@ -156,6 +162,16 @@
 			name = BeautyTeamDebug;
 			sourceTree = "<group>";
 		};
+		1D3E7EAC1CCA73B600D12251 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */,
+				1D3E7EAF1CCA747700D12251 /* ElementCell.swift */,
+				1D3E7EB11CCA748900D12251 /* HeaderCell.swift */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
 		1D40B19D1CB8F52E00E3166E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +187,7 @@
 		1D40B19E1CB8F53800E3166E /* Notice */ = {
 			isa = PBXGroup;
 			children = (
+				1D3E7EAC1CCA73B600D12251 /* Elements */,
 				1D80C6D61CC8A9E6005D6216 /* NoticeVC.swift */,
 				1D80C6DE1CC8B199005D6216 /* NoticeRightNavigationItemPopMenu.swift */,
 				1D80C6E01CC8B4D5005D6216 /* AddPersonalTaskVC.swift */,
@@ -546,6 +563,8 @@
 				1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */,
 				1DC1F7131CC1ED5C00A5E9BF /* TeamUserRelation.swift in Sources */,
 				1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */,
+				1D3E7EB21CCA748900D12251 /* HeaderCell.swift in Sources */,
+				1D3E7EAE1CCA746900D12251 /* NoticeCell.swift in Sources */,
 				1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */,
 				1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */,
 				1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */,
@@ -573,6 +592,7 @@
 				1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */,
 				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
+				1D3E7EB01CCA747700D12251 /* ElementCell.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
 				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 				1D80C6E51CC8B4F4005D6216 /* ImportVC.swift in Sources */,
