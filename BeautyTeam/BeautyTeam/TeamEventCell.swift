@@ -48,6 +48,15 @@ class TeamEventCell: UITableViewCell, CustomPresentCellProtocol {
         self.locationImageView?.image = UIImage.fontAwesomeIconWithName(.LocationArrow, textColor: UIColor.blackColor(), size: fontAwesomeSize)
         self.locationLabel = UILabel(frame: CGRectMake(30, 110, 300, 12))
         self.locationLabel?.font = UIFont.systemFontOfSize(12)
+        
+        self.contentView.addSubview(titleLabel!)
+        self.contentView.addSubview(projectImageView!)
+        self.contentView.addSubview(projectLabel!)
+        self.contentView.addSubview(timeImageView!)
+        self.contentView.addSubview(timeLabel!)
+        self.contentView.addSubview(emergencyLabel!)
+        self.contentView.addSubview(locationImageView!)
+        self.contentView.addSubview(locationLabel!)
     }
     
     func assignValue(title: String, project: String, happenTime: NSDate, endTime: NSDate, location: String) {

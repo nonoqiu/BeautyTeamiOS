@@ -20,6 +20,19 @@ class NoticeHeaderCell: UITableViewCell, CustomPresentCellProtocol {
         super.init(style: .Default, reuseIdentifier: reuseIdentifier)
         
         self.headerColorRectangle = UIView(frame: CGRectMake(0, 0, 10, 20))
+        
+        self.headerImage = UIImageView(frame: CGRectMake(12, 2, 16, 16))
+        
+        self.headerTitle = UILabel(frame: CGRectMake(30, 2, 200, 16))
+        self.headerTitle?.font = UIFont.boldSystemFontOfSize(15)
+        
+        self.collapseSign = CollapseSign(x: ObiBeautyTeam.deviceWidth - 17, y: 6)
+        self.collapseSign?.collapse()
+        self.accessoryView = self.collapseSign
+        
+        self.contentView.addSubview(headerColorRectangle!)
+        self.contentView.addSubview(headerImage!)
+        self.contentView.addSubview(headerTitle!)
     }
     
     required init?(coder aDecoder: NSCoder) {
