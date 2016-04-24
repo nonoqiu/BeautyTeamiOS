@@ -8,12 +8,23 @@
 
 import UIKit
 
-class NoticeHeaderCell: UITableViewCell {
+class NoticeHeaderCell: UITableViewCell, CustomPresentCellProtocol {
     
     var headerColorRectangle: UIView?
     var headerImage: UIImageView?
     var headerTitle: UILabel?
     var collapseSign: CollapseSign?
+    static var height: CGFloat = 20
+    
+    required init(reuseIdentifier: String) {
+        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
+        
+        self.headerColorRectangle = UIView(frame: CGRectMake(0, 0, 10, 20))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
