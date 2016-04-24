@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
-		1D3E7EAE1CCA746900D12251 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */; };
-		1D3E7EB01CCA747700D12251 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EAF1CCA747700D12251 /* ElementCell.swift */; };
-		1D3E7EB21CCA748900D12251 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7EB11CCA748900D12251 /* HeaderCell.swift */; };
 		1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */; };
 		1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D321CC3329900868A68 /* RadioStation.swift */; };
 		1D4C4D351CC3337200868A68 /* RadioTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D341CC3337200868A68 /* RadioTask.swift */; };
 		1D4C4D371CC3347000868A68 /* RadioEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D361CC3347000868A68 /* RadioEvent.swift */; };
+		1D4E0F341CCC9B6B00BCC415 /* RadioStationTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F331CCC9B6B00BCC415 /* RadioStationTaskCell.swift */; };
+		1D4E0F361CCC9B9000BCC415 /* RadioStationEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F351CCC9B9000BCC415 /* RadioStationEventCell.swift */; };
+		1D4E0F381CCC9BA200BCC415 /* TeamTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */; };
+		1D4E0F3A1CCC9BB700BCC415 /* TeamEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */; };
+		1D4E0F401CCCA93E00BCC415 /* CustomPresentCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */; };
 		1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDB1CC0946800A59F92 /* ServerReply.swift */; };
 		1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDD1CC0D91700A59F92 /* INoticable.swift */; };
 		1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BE01CC0D9BB00A59F92 /* Event.swift */; };
@@ -74,13 +76,15 @@
 /* Begin PBXFileReference section */
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
-		1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
-		1D3E7EAF1CCA747700D12251 /* ElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
-		1D3E7EB11CCA748900D12251 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelationType.swift; sourceTree = "<group>"; };
 		1D4C4D321CC3329900868A68 /* RadioStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
 		1D4C4D341CC3337200868A68 /* RadioTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTask.swift; sourceTree = "<group>"; };
 		1D4C4D361CC3347000868A68 /* RadioEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioEvent.swift; sourceTree = "<group>"; };
+		1D4E0F331CCC9B6B00BCC415 /* RadioStationTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStationTaskCell.swift; sourceTree = "<group>"; };
+		1D4E0F351CCC9B9000BCC415 /* RadioStationEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStationEventCell.swift; sourceTree = "<group>"; };
+		1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTaskCell.swift; sourceTree = "<group>"; };
+		1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamEventCell.swift; sourceTree = "<group>"; };
+		1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentCellProtocol.swift; sourceTree = "<group>"; };
 		1D528BDB1CC0946800A59F92 /* ServerReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerReply.swift; sourceTree = "<group>"; };
 		1D528BDD1CC0D91700A59F92 /* INoticable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INoticable.swift; sourceTree = "<group>"; };
 		1D528BE01CC0D9BB00A59F92 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -165,9 +169,10 @@
 		1D3E7EAC1CCA73B600D12251 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				1D3E7EAD1CCA746900D12251 /* NoticeCell.swift */,
-				1D3E7EAF1CCA747700D12251 /* ElementCell.swift */,
-				1D3E7EB11CCA748900D12251 /* HeaderCell.swift */,
+				1D4E0F331CCC9B6B00BCC415 /* RadioStationTaskCell.swift */,
+				1D4E0F351CCC9B9000BCC415 /* RadioStationEventCell.swift */,
+				1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */,
+				1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */,
 			);
 			name = Elements;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				1D56DB241CC778C100E0F3BA /* ObiObject.swift */,
 				1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */,
 				1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */,
+				1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */,
 			);
 			path = BeautyTeam;
 			sourceTree = "<group>";
@@ -559,12 +565,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4E0F401CCCA93E00BCC415 /* CustomPresentCellProtocol.swift in Sources */,
 				1D80C6D71CC8A9E6005D6216 /* NoticeVC.swift in Sources */,
 				1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */,
 				1DC1F7131CC1ED5C00A5E9BF /* TeamUserRelation.swift in Sources */,
 				1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */,
-				1D3E7EB21CCA748900D12251 /* HeaderCell.swift in Sources */,
-				1D3E7EAE1CCA746900D12251 /* NoticeCell.swift in Sources */,
 				1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */,
 				1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */,
 				1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */,
@@ -572,16 +577,19 @@
 				1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */,
 				1DC93B261CC345B7007214DE /* Project.swift in Sources */,
 				1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */,
+				1D4E0F361CCC9B9000BCC415 /* RadioStationEventCell.swift in Sources */,
 				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
 				1D56DB231CC7783900E0F3BA /* ObiValue.swift in Sources */,
 				1D56DB251CC778C100E0F3BA /* ObiObject.swift in Sources */,
 				1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */,
+				1D4E0F341CCC9B6B00BCC415 /* RadioStationTaskCell.swift in Sources */,
 				1D56DB291CC77E4200E0F3BA /* ObiLoginVC.swift in Sources */,
 				1DDFB4791CAA218700124835 /* BeautyTeam.xcdatamodeld in Sources */,
 				1DDFB4731CAA218700124835 /* ViewController.swift in Sources */,
 				1DC1F7111CC1EB9600A5E9BF /* ObisoftUser.swift in Sources */,
 				1D80C6E11CC8B4D5005D6216 /* AddPersonalTaskVC.swift in Sources */,
 				1D80C6DF1CC8B199005D6216 /* NoticeRightNavigationItemPopMenu.swift in Sources */,
+				1D4E0F3A1CCC9BB700BCC415 /* TeamEventCell.swift in Sources */,
 				1DDFB4711CAA218700124835 /* AppDelegate.swift in Sources */,
 				1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */,
 				1D4C4D371CC3347000868A68 /* RadioEvent.swift in Sources */,
@@ -590,9 +598,9 @@
 				1D80C6D91CC8AC01005D6216 /* TeamVC.swift in Sources */,
 				1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */,
 				1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */,
+				1D4E0F381CCC9BA200BCC415 /* TeamTaskCell.swift in Sources */,
 				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
-				1D3E7EB01CCA747700D12251 /* ElementCell.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
 				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 				1D80C6E51CC8B4F4005D6216 /* ImportVC.swift in Sources */,

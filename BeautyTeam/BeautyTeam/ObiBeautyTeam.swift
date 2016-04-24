@@ -52,6 +52,8 @@ struct ObiBeautyTeam {
         }
     }
     
-    static var defaultRowHeight: CGFloat = UITableView().rowHeight
+    static func throughAllString(str: String) -> NSRange {
+        return NSMakeRange(0, str.characters.count)
+    }
     
 }
