@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import KeychainSwift
 
 class ObiLoginVC: UITableViewController {
     
@@ -199,10 +200,14 @@ class ObiLoginVC: UITableViewController {
                         UIAlertView(title: "Sign in Failed", message: "\(data.statusCode) Unknown Error.\nThe error will be logged to Obisoft.", delegate: nil, cancelButtonTitle: "OK").show()
                         ObiBeautyTeam.logError("\(data.statusCode) in login")
                     }
+                    return
                 }
                 
                 // If login succeed
-                
+                // Store Password
+                let keychain = KeychainSwift()
+                keychain.set(username, forKey: "obiUserName")
+                keychain.set(password, forKey: "obiPassword")
         }
     }
 

@@ -17,6 +17,8 @@
 		1D4E0F381CCC9BA200BCC415 /* TeamTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */; };
 		1D4E0F3A1CCC9BB700BCC415 /* TeamEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */; };
 		1D4E0F401CCCA93E00BCC415 /* CustomPresentCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */; };
+		1D4E0F421CCCB0B300BCC415 /* NoticeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F411CCCB0B300BCC415 /* NoticeHeaderCell.swift */; };
+		1D4E0F451CCCB44900BCC415 /* CollapseSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F441CCCB44900BCC415 /* CollapseSign.swift */; };
 		1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDB1CC0946800A59F92 /* ServerReply.swift */; };
 		1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDD1CC0D91700A59F92 /* INoticable.swift */; };
 		1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BE01CC0D9BB00A59F92 /* Event.swift */; };
@@ -85,6 +87,8 @@
 		1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTaskCell.swift; sourceTree = "<group>"; };
 		1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamEventCell.swift; sourceTree = "<group>"; };
 		1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentCellProtocol.swift; sourceTree = "<group>"; };
+		1D4E0F411CCCB0B300BCC415 /* NoticeHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeHeaderCell.swift; sourceTree = "<group>"; };
+		1D4E0F441CCCB44900BCC415 /* CollapseSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapseSign.swift; sourceTree = "<group>"; };
 		1D528BDB1CC0946800A59F92 /* ServerReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerReply.swift; sourceTree = "<group>"; };
 		1D528BDD1CC0D91700A59F92 /* INoticable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INoticable.swift; sourceTree = "<group>"; };
 		1D528BE01CC0D9BB00A59F92 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -169,10 +173,12 @@
 		1D3E7EAC1CCA73B600D12251 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				1D4E0F431CCCB42C00BCC415 /* CollapseSign */,
 				1D4E0F331CCC9B6B00BCC415 /* RadioStationTaskCell.swift */,
 				1D4E0F351CCC9B9000BCC415 /* RadioStationEventCell.swift */,
 				1D4E0F371CCC9BA200BCC415 /* TeamTaskCell.swift */,
 				1D4E0F391CCC9BB700BCC415 /* TeamEventCell.swift */,
+				1D4E0F411CCCB0B300BCC415 /* NoticeHeaderCell.swift */,
 			);
 			name = Elements;
 			sourceTree = "<group>";
@@ -223,6 +229,14 @@
 			children = (
 			);
 			name = etc;
+			sourceTree = "<group>";
+		};
+		1D4E0F431CCCB42C00BCC415 /* CollapseSign */ = {
+			isa = PBXGroup;
+			children = (
+				1D4E0F441CCCB44900BCC415 /* CollapseSign.swift */,
+			);
+			name = CollapseSign;
 			sourceTree = "<group>";
 		};
 		1D528BDA1CC0928200A59F92 /* Data Structure */ = {
@@ -600,11 +614,13 @@
 				1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */,
 				1D4E0F381CCC9BA200BCC415 /* TeamTaskCell.swift in Sources */,
 				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
+				1D4E0F451CCCB44900BCC415 /* CollapseSign.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
 				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 				1D80C6E51CC8B4F4005D6216 /* ImportVC.swift in Sources */,
 				1D80C6E31CC8B4E8005D6216 /* AddPersonalEventVC.swift in Sources */,
+				1D4E0F421CCCB0B300BCC415 /* NoticeHeaderCell.swift in Sources */,
 				1D4C4D351CC3337200868A68 /* RadioTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

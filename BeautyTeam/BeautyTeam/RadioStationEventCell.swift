@@ -54,7 +54,7 @@ class RadioStationEventCell: UITableViewCell, CustomPresentCellProtocol {
         // Today 21:00 - 22:00
         // Today 09:00 - Tomorrow 14:00
         // 21:00 - 22:00 April 9
-        // Modify this line after having any idea.
+        // Modify this line and the one in `TeanEventCell.swift` after having any idea.
         let combinedTimeStr = "\(happenTimeStr) - \(endTimeStr)"
         
         let combinedAttrStr = NSMutableAttributedString(string: combinedTimeStr)
