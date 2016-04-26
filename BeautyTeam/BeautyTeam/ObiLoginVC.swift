@@ -208,6 +208,9 @@ class ObiLoginVC: UITableViewController {
                 let keychain = KeychainSwift()
                 keychain.set(username, forKey: "obiUserName")
                 keychain.set(password, forKey: "obiPassword")
+                
+                self.navigationController?.pushViewController(UIViewController(), animated: true)
+                
         }
     }
 

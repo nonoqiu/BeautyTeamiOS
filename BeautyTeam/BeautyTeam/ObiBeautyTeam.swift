@@ -56,4 +56,23 @@ struct ObiBeautyTeam {
         return NSMakeRange(0, str.characters.count)
     }
     
+    static var tabBarControllerOnce: dispatch_once_t = 0
+    static func sharedTabBarController() -> UITabBarController {
+        struct Static {
+            static var instance: UITabBarController!
+        }
+        dispatch_once(&ObiBeautyTeam.tabBarControllerOnce, {
+            let notice = UINavigationController(rootViewController: NoticeVC(style: .Grouped))
+            let team = UINavigationController(rootViewController: TeamVC(style: .Grouped))
+            let main = UINavigationController(rootViewController: MainVC(style: .Grouped))
+            
+            Static.instance = UITabBarController()
+            
+            Static.instance.addChildViewController(notice)
+            Static.instance.addChildViewController(team)
+            Static.instance.addChildViewController(main)
+        })
+        return Static.instance
+    }
+    
 }

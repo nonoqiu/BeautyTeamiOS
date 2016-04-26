@@ -19,6 +19,7 @@
 		1D4E0F401CCCA93E00BCC415 /* CustomPresentCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */; };
 		1D4E0F421CCCB0B300BCC415 /* NoticeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F411CCCB0B300BCC415 /* NoticeHeaderCell.swift */; };
 		1D4E0F451CCCB44900BCC415 /* CollapseSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F441CCCB44900BCC415 /* CollapseSign.swift */; };
+		1D4E0F4D1CCF9AA600BCC415 /* TabContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0F4C1CCF9AA600BCC415 /* TabContainerVC.swift */; };
 		1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDB1CC0946800A59F92 /* ServerReply.swift */; };
 		1D528BDE1CC0D91700A59F92 /* INoticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BDD1CC0D91700A59F92 /* INoticable.swift */; };
 		1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528BE01CC0D9BB00A59F92 /* Event.swift */; };
@@ -89,6 +90,7 @@
 		1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentCellProtocol.swift; sourceTree = "<group>"; };
 		1D4E0F411CCCB0B300BCC415 /* NoticeHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeHeaderCell.swift; sourceTree = "<group>"; };
 		1D4E0F441CCCB44900BCC415 /* CollapseSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapseSign.swift; sourceTree = "<group>"; };
+		1D4E0F4C1CCF9AA600BCC415 /* TabContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabContainerVC.swift; sourceTree = "<group>"; };
 		1D528BDB1CC0946800A59F92 /* ServerReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerReply.swift; sourceTree = "<group>"; };
 		1D528BDD1CC0D91700A59F92 /* INoticable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INoticable.swift; sourceTree = "<group>"; };
 		1D528BE01CC0D9BB00A59F92 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				1D40B19F1CB8F54E00E3166E /* Team */,
 				1D40B1A01CB8F55900E3166E /* Main */,
 				1D40B1A11CB8F6FD00E3166E /* etc */,
+				1D4E0F4C1CCF9AA600BCC415 /* TabContainerVC.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */,
 				1D4E0F361CCC9B9000BCC415 /* RadioStationEventCell.swift in Sources */,
 				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
+				1D4E0F4D1CCF9AA600BCC415 /* TabContainerVC.swift in Sources */,
 				1D56DB231CC7783900E0F3BA /* ObiValue.swift in Sources */,
 				1D56DB251CC778C100E0F3BA /* ObiObject.swift in Sources */,
 				1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */,
