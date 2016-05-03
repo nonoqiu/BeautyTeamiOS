@@ -45,6 +45,7 @@
 		1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */; };
 		1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7161CC1EE4A00A5E9BF /* PersonalTask.swift */; };
 		1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1F7181CC1EED600A5E9BF /* PersonalEvent.swift */; };
+		1DC270861CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC270851CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift */; };
 		1DC93B261CC345B7007214DE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC93B251CC345B7007214DE /* Project.swift */; };
 		1DC93B281CC3462B007214DE /* GroupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC93B271CC3462B007214DE /* GroupEvent.swift */; };
 		1DC93B2A1CC34678007214DE /* GroupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC93B291CC34678007214DE /* GroupTask.swift */; };
@@ -116,6 +117,7 @@
 		1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamEventRelation.swift; sourceTree = "<group>"; };
 		1DC1F7161CC1EE4A00A5E9BF /* PersonalTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTask.swift; sourceTree = "<group>"; };
 		1DC1F7181CC1EED600A5E9BF /* PersonalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalEvent.swift; sourceTree = "<group>"; };
+		1DC270851CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchDataFromNetworkProtocol.swift; sourceTree = "<group>"; };
 		1DC93B251CC345B7007214DE /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		1DC93B271CC3462B007214DE /* GroupEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupEvent.swift; sourceTree = "<group>"; };
 		1DC93B291CC34678007214DE /* GroupTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTask.swift; sourceTree = "<group>"; };
@@ -188,12 +190,14 @@
 		1D40B19D1CB8F52E00E3166E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1D528BDB1CC0946800A59F92 /* ServerReply.swift */,
 				1DC93B2B1CC35983007214DE /* Authentication */,
 				1D40B19E1CB8F53800E3166E /* Notice */,
 				1D40B19F1CB8F54E00E3166E /* Team */,
 				1D40B1A01CB8F55900E3166E /* Main */,
 				1D40B1A11CB8F6FD00E3166E /* etc */,
 				1D4E0F4C1CCF9AA600BCC415 /* TabContainerVC.swift */,
+				1DC270851CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -201,12 +205,11 @@
 		1D40B19E1CB8F53800E3166E /* Notice */ = {
 			isa = PBXGroup;
 			children = (
+				1DC270871CD8E49100E57D3B /* Model */,
+				1DC270841CD8D4A300E57D3B /* SubVC */,
+				1DC270831CD8D47700E57D3B /* RightMenu */,
 				1D3E7EAC1CCA73B600D12251 /* Elements */,
 				1D80C6D61CC8A9E6005D6216 /* NoticeVC.swift */,
-				1D80C6DE1CC8B199005D6216 /* NoticeRightNavigationItemPopMenu.swift */,
-				1D80C6E01CC8B4D5005D6216 /* AddPersonalTaskVC.swift */,
-				1D80C6E21CC8B4E8005D6216 /* AddPersonalEventVC.swift */,
-				1D80C6E41CC8B4F4005D6216 /* ImportVC.swift */,
 			);
 			name = Notice;
 			sourceTree = "<group>";
@@ -291,6 +294,31 @@
 			name = Relationship;
 			sourceTree = "<group>";
 		};
+		1DC270831CD8D47700E57D3B /* RightMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1D80C6DE1CC8B199005D6216 /* NoticeRightNavigationItemPopMenu.swift */,
+			);
+			name = RightMenu;
+			sourceTree = "<group>";
+		};
+		1DC270841CD8D4A300E57D3B /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				1D80C6E01CC8B4D5005D6216 /* AddPersonalTaskVC.swift */,
+				1D80C6E21CC8B4E8005D6216 /* AddPersonalEventVC.swift */,
+				1D80C6E41CC8B4F4005D6216 /* ImportVC.swift */,
+			);
+			name = SubVC;
+			sourceTree = "<group>";
+		};
+		1DC270871CD8E49100E57D3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1DC93B2B1CC35983007214DE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,7 +371,6 @@
 		1DDFB46F1CAA218700124835 /* BeautyTeam */ = {
 			isa = PBXGroup;
 			children = (
-				1D528BDB1CC0946800A59F92 /* ServerReply.swift */,
 				1D528BDA1CC0928200A59F92 /* Data Structure */,
 				1D40B19D1CB8F52E00E3166E /* Modules */,
 				1DDFB4701CAA218700124835 /* AppDelegate.swift */,
@@ -597,6 +624,7 @@
 				1D4E0F361CCC9B9000BCC415 /* RadioStationEventCell.swift in Sources */,
 				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
 				1D4E0F4D1CCF9AA600BCC415 /* TabContainerVC.swift in Sources */,
+				1DC270861CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift in Sources */,
 				1D56DB231CC7783900E0F3BA /* ObiValue.swift in Sources */,
 				1D56DB251CC778C100E0F3BA /* ObiObject.swift in Sources */,
 				1DC1F7191CC1EED600A5E9BF /* PersonalEvent.swift in Sources */,

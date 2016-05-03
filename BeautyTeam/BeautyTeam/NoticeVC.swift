@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
-class NoticeVC: UITableViewController {
+class NoticeVC: UITableViewController, FetchDataFromNetworkProtocol {
     
     var rightNavigationPopItem: NoticeRightNavigationItemPopMenu?
 
@@ -38,6 +39,15 @@ class NoticeVC: UITableViewController {
         
         self.view.addSubview(rightNavigationPopItem!)
 //        self.tableView.addGestureRecognizer(listener)
+    }
+    
+    func fetchData() {
+        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AllNoticeForMe")
+            .responseJSON {
+            resp in
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
