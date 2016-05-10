@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (3.3.0)
+  - Alamofire-Synchronous (3.0.0):
+    - Alamofire (~> 3.0)
   - AsyncSwift (1.7.2)
   - FontAwesome.swift (0.7.1)
   - KeychainSwift (3.0.13)
@@ -9,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
+  - Alamofire-Synchronous (~> 3.0.0)
   - AsyncSwift (~> 1.7.2)
   - FontAwesome.swift (~> 0.7.1)
   - KeychainSwift (~> 3.0.11)
@@ -16,6 +19,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Alamofire-Synchronous: dc5dccc284e03c3b760e09c655dfe6fa292364b6
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828
   KeychainSwift: 3bda518adb1ab386da0a9a1de93b561ee2c9322b

@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import Async
 
 class TeamVC: UITableViewController {
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+        
+        Async.background {
+            
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +36,6 @@ class TeamVC: UITableViewController {
         self.navigationItem.title = "Team"
         
         // Load data from storage
-        
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
