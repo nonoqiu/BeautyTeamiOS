@@ -57,6 +57,7 @@
 		1DDFB47E1CAA218700124835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDFB47C1CAA218700124835 /* LaunchScreen.storyboard */; };
 		1DDFB4891CAA218700124835 /* BeautyTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4881CAA218700124835 /* BeautyTeamTests.swift */; };
 		1DDFB4941CAA218700124835 /* BeautyTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4931CAA218700124835 /* BeautyTeamUITests.swift */; };
+		1DEE89AE1CDCC8AF00FA2D54 /* ObiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */; };
 		8F159BE2A514E4D5AA8BAD3C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CF00446CADCE8A08C53576 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		1DDFB48F1CAA218700124835 /* BeautyTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDFB4931CAA218700124835 /* BeautyTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyTeamUITests.swift; sourceTree = "<group>"; };
 		1DDFB4951CAA218700124835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiList.swift; sourceTree = "<group>"; };
 		41CF00446CADCE8A08C53576 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C54FF83F1C9631CB620EBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		53FCE2A8632C0F3FDE75AC05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */,
 				1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */,
 				1D4E0F3F1CCCA93E00BCC415 /* CustomPresentCellProtocol.swift */,
+				1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */,
 			);
 			path = BeautyTeam;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				1D4E0F451CCCB44900BCC415 /* CollapseSign.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
+				1DEE89AE1CDCC8AF00FA2D54 /* ObiList.swift in Sources */,
 				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 				1D80C6E51CC8B4F4005D6216 /* ImportVC.swift in Sources */,
 				1D80C6E31CC8B4E8005D6216 /* AddPersonalEventVC.swift in Sources */,

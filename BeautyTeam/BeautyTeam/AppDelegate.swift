@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import KeychainSwift
+
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
@@ -87,7 +90,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 //        self.window?.addSubview(tabBarController!.view)
         self.window?.makeKeyAndVisible()
         
+        // Add login listener
+        
         return true
+    }
+    
+    func silentCheckSignIn() {
+        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/loginstsatus")
+            .responseJSON {
+            resp in
+            
+            guard let rawData = resp.result.value as? Dictionary<String, AnyObject?> else {
+                return
+            }
+            let loginStatus = ObiValue<Bool>(rawData: rawData)
+            if loginStatus.statusCode != 200 {
+                return
+            }
+            if !loginStatus.value {
+                NSNotificationCenter.defaultCenter().postNotificationName("", object: nil)
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

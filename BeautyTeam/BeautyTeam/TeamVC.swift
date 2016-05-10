@@ -12,7 +12,7 @@ class TeamVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+//        self.view.backgroundColor = UIColor.whiteColor()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +20,12 @@ class TeamVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.navigationItem.title = "Team"
+        
+        // Load data from storage
+        
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +36,8 @@ class TeamVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        // WARNING: Incomplete implementation, return the number of sections
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

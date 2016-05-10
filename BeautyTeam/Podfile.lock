@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.3.0)
+  - AsyncSwift (1.7.2)
   - FontAwesome.swift (0.7.1)
   - KeychainSwift (3.0.13)
   - SDWebImage (3.7.5):
@@ -8,12 +9,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
+  - AsyncSwift (~> 1.7.2)
   - FontAwesome.swift (~> 0.7.1)
   - KeychainSwift (~> 3.0.11)
   - SDWebImage (~> 3.7.5)
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828
   KeychainSwift: 3bda518adb1ab386da0a9a1de93b561ee2c9322b
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

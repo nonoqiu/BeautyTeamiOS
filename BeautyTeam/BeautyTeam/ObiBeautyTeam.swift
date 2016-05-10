@@ -75,4 +75,79 @@ struct ObiBeautyTeam {
         return Static.instance
     }
     
+    static var signInSignature: String {
+        get {
+            return "ObiBeautyTeam_SignedIn"
+        }
+    }
+    
+    static func silentCheckSignIn() {
+        
+    }
+    
+    static func silentSignIn(after after: () -> Void) {
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        
+        let keychain = KeychainSwift()
+        guard let username = keychain.get("username") else {
+            userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+            userDefault.synchronize()
+            return
+        }
+        guard let password = keychain.get("password") else {
+            userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+            userDefault.synchronize()
+            return
+        }
+        
+        Alamofire.request(.POST, ObiBeautyTeam.APIURL + "/Login", parameters: ["Email" : username, "Password" : password])
+            .responseJSON {
+                resp in
+                
+                // Parse
+                guard let rawData = resp.result.value as? Dictionary<String, AnyObject?> else {
+                    userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+                    userDefault.synchronize()
+                    return
+                }
+                let loginValue = ObiValue<String>(rawData: rawData)
+                
+                if loginValue.statusCode != 200 {
+                    userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+                    userDefault.synchronize()
+                    return
+                } else {
+                    userDefault.setBool(true, forKey: ObiBeautyTeam.signInSignature)
+                    userDefault.synchronize()
+                }
+                
+                after()
+        }
+    }
+    
+    static func checkSignInStatusBeforeHandlingNetwork(after after: () -> Void) {
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        
+        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/loginstatus").responseJSON {
+            resp in
+            
+            guard let rawData = resp.result.value as? Dictionary<String, AnyObject?> else {
+                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+                userDefault.synchronize()
+                return
+            }
+            let checkSignIn = ObiValue<Bool>(rawData: rawData)
+            if checkSignIn.statusCode != 200 {
+                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+                userDefault.synchronize()
+                return
+            }
+            if !checkSignIn.value {
+                ObiBeautyTeam.silentSignIn(after: after)
+            } else {
+                after()
+            }
+        }
+    }
+    
 }

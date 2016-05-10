@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AsyncSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0AC8FA83DCA4C8085BA2557A188C0E1D</key>
+		<key>039A01C50F67FD26895A2FCABE7BB182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29D51FE9AD3EB7037900AD7B341D55C9</key>
+		<key>094AB35CF0DC8310609CA9BDC929E0A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A2DCF5DC126FD396E260DC76ACDC6D9</key>
+		<key>1CC10B235BBF7A2284ADD28A117D464C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BE929E51A627330E5C0D2FFC584661E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5FA788ED81BFF40695C2C02DF3544A8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67D9CB315FA8C3530C4E9BCB4D1EFB2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9666688CB41B38A9914616144C9C7A3E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACBDF4138C360319FC2DA938B3E44A24</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3E6A8B35273F2082EA6390FD7133204</key>
 		<dict>
 			<key>primary</key>
 			<true/>

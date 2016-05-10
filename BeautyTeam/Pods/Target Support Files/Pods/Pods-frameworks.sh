@@ -53,12 +53,14 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/Async.framework'
   install_framework 'Pods/FontAwesome_swift.framework'
   install_framework 'Pods/KeychainSwift.framework'
   install_framework 'Pods/SDWebImage.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/Async.framework'
   install_framework 'Pods/FontAwesome_swift.framework'
   install_framework 'Pods/KeychainSwift.framework'
   install_framework 'Pods/SDWebImage.framework'

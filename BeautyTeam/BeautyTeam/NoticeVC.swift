@@ -12,6 +12,7 @@ import Alamofire
 class NoticeVC: UITableViewController, FetchDataFromNetworkProtocol {
     
     var rightNavigationPopItem: NoticeRightNavigationItemPopMenu?
+    var notices = [INoticable]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +43,18 @@ class NoticeVC: UITableViewController, FetchDataFromNetworkProtocol {
     }
     
     func fetchData() {
-        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AllNoticeForMe")
-            .responseJSON {
-            resp in
-            
-            
-        }
+        ObiBeautyTeam.checkSignInStatusBeforeHandlingNetwork(after: {
+            Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AllNoticeForMe").responseJSON(completionHandler: {
+                [weak self] resp in
+                
+                guard let JSONdata = resp.result.value as? Dictionary<String, AnyObject?> else {
+                    return
+                }
+                let noticeDataRawNotice = ObiList<INoticable>(rawData: JSONdata)
+                self?.notices = noticeDataRawNotice.list
+                self?.performSelectorOnMainThread(#selector(self?.tableView.reloadData), withObject: nil, waitUntilDone: false)
+            })
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,7 +79,7 @@ class NoticeVC: UITableViewController, FetchDataFromNetworkProtocol {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return self.notices.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
