@@ -8,14 +8,48 @@
 
 import UIKit
 import Async
+import Alamofire
+import Alamofire_Synchronous
 
 class TeamVC: UITableViewController {
+    
+    var GU_Relations = [GroupUserRelation]()
+    var groups = [Group]()
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
         
+//        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/Groupsijoined").responseJSON {
+//            resp in
+//            
+//            guard let returnJSON = resp.result.value as? Dictionary<String, AnyObject> else {
+//                fatalError()
+//            }
+//            let NSDicEncodedJSON = NSDictionary(dictionary: returnJSON)
+//            NSNotificationCenter.defaultCenter().postNotificationName("getGroupDetails", object: NSDicEncodedJSON)
+//        }
+        
+        
+        
+    }
+    
+    func getGroupDetailsIntoSelfArray() {
         Async.background {
-            
+            let group = AsyncGroup()
+            for element in self.GU_Relations {
+                group.background {
+                    let resp = Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/GroupDetails/\(element.groupId)").responseJSON()
+                    guard let data = resp.result.value as? Dictionary<String, AnyObject?> else {
+                        fatalError()
+                    }
+                    let singleGroup = Group(rawData: data)
+                    self.groups.append(singleGroup)
+                }
+            }
+            group.wait()
+        }
+            .main {
+                self.tableView.reloadData()
         }
     }
     
@@ -35,7 +69,19 @@ class TeamVC: UITableViewController {
         
         self.navigationItem.title = "Team"
         
-        // Load data from storage
+        // Load data
+        Async.background {
+            let resp = Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/Groupsijoined").responseJSON()
+            guard let rJSON = resp.result.value as? Dictionary<String, AnyObject?> else {
+                fatalError()
+            }
+            // Parse
+            let raw = ObiList<GroupUserRelation>(rawData: rJSON)
+            self.GU_Relations = raw.list
+            }
+            .main {
+                self.getGroupDetailsIntoSelfArray()
+        }
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -55,18 +101,18 @@ class TeamVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.groups.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let rowLocation = indexPath.row
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

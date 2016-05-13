@@ -58,6 +58,7 @@
 		1DDFB4891CAA218700124835 /* BeautyTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4881CAA218700124835 /* BeautyTeamTests.swift */; };
 		1DDFB4941CAA218700124835 /* BeautyTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4931CAA218700124835 /* BeautyTeamUITests.swift */; };
 		1DEE89AE1CDCC8AF00FA2D54 /* ObiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */; };
+		1DEE89C71CE1B2D300FA2D54 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */; };
 		8F159BE2A514E4D5AA8BAD3C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CF00446CADCE8A08C53576 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		1DDFB4931CAA218700124835 /* BeautyTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyTeamUITests.swift; sourceTree = "<group>"; };
 		1DDFB4951CAA218700124835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiList.swift; sourceTree = "<group>"; };
+		1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		41CF00446CADCE8A08C53576 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C54FF83F1C9631CB620EBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		53FCE2A8632C0F3FDE75AC05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		1D40B19F1CB8F54E00E3166E /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				1DEE89C51CE1B2B200FA2D54 /* Elements */,
 				1D80C6D81CC8AC01005D6216 /* TeamVC.swift */,
 			);
 			name = Team;
@@ -408,6 +411,14 @@
 				1DDFB4951CAA218700124835 /* Info.plist */,
 			);
 			path = BeautyTeamUITests;
+			sourceTree = "<group>";
+		};
+		1DEE89C51CE1B2B200FA2D54 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */,
+			);
+			name = Elements;
 			sourceTree = "<group>";
 		};
 		921148848947FA58EF95082E /* Frameworks */ = {
@@ -616,6 +627,7 @@
 				1D80C6D71CC8A9E6005D6216 /* NoticeVC.swift in Sources */,
 				1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */,
 				1DC1F7131CC1ED5C00A5E9BF /* TeamUserRelation.swift in Sources */,
+				1DEE89C71CE1B2D300FA2D54 /* GroupTableViewCell.swift in Sources */,
 				1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */,
 				1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */,
 				1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */,
