@@ -42,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let teamNC = UINavigationController(rootViewController: teamVC!)
         let mainNC = UINavigationController(rootViewController: mainVC!)
         
+        // Debugging
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = teamNC
+        self.window?.makeKeyAndVisible()
+        return true
+        
 //        let tabBarController = UITabBarController()
         self.tabBarController = UITabBarController()
         

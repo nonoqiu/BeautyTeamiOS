@@ -12,7 +12,7 @@ class GroupTableViewCell: UITableViewCell {
     
     var groupImage: UIImageView?
     var groupNameLabel: UILabel?
-    var 
+//    var 
     
     init(reuseIdentifier: String?) {
         super.init(style: .Default, reuseIdentifier: reuseIdentifier)

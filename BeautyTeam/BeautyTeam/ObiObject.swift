@@ -13,7 +13,9 @@ class ObiObject<T: InitialProtocol>: ServerReply {
     
     required init(rawData: [String : AnyObject?]) {
         super.init(rawData: rawData)
-        guard let object_raw = rawData["Object"] as? [String : AnyObject?] else {
+        print(rawData)
+        guard let object_raw = rawData["Object"] as? [String : AnyObject] else {
+//            print(rawData["Object"]);
             fatalError()
         }
         self.object = T(rawData: object_raw)

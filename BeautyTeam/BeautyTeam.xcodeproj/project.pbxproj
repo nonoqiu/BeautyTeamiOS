@@ -29,6 +29,7 @@
 		1D56DB291CC77E4200E0F3BA /* ObiLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB281CC77E4200E0F3BA /* ObiLoginVC.swift */; };
 		1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */; };
 		1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */; };
+		1D633BCF1CEDE669000CF9EB /* GroupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D633BCE1CEDE669000CF9EB /* GroupType.swift */; };
 		1D80C6D71CC8A9E6005D6216 /* NoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80C6D61CC8A9E6005D6216 /* NoticeVC.swift */; };
 		1D80C6D91CC8AC01005D6216 /* TeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80C6D81CC8AC01005D6216 /* TeamVC.swift */; };
 		1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80C6DA1CC8AC12005D6216 /* MainVC.swift */; };
@@ -103,6 +104,7 @@
 		1D56DB281CC77E4200E0F3BA /* ObiLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiLoginVC.swift; sourceTree = "<group>"; };
 		1D56DB2A1CC79ED600E0F3BA /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		1D56DB2C1CC7B24700E0F3BA /* ObiBeautyTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiBeautyTeam.swift; sourceTree = "<group>"; };
+		1D633BCE1CEDE669000CF9EB /* GroupType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupType.swift; sourceTree = "<group>"; };
 		1D80C6D61CC8A9E6005D6216 /* NoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeVC.swift; sourceTree = "<group>"; };
 		1D80C6D81CC8AC01005D6216 /* TeamVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamVC.swift; sourceTree = "<group>"; };
 		1D80C6DA1CC8AC12005D6216 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				1DC1F7121CC1ED5C00A5E9BF /* TeamUserRelation.swift */,
 				1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */,
 				1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */,
+				1D633BCE1CEDE669000CF9EB /* GroupType.swift */,
 			);
 			name = Relationship;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */,
 				1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */,
 				1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */,
+				1D633BCF1CEDE669000CF9EB /* GroupType.swift in Sources */,
 				1DC93B281CC3462B007214DE /* GroupEvent.swift in Sources */,
 				1DC1F7071CC1E7F200A5E9BF /* Task.swift in Sources */,
 				1DC93B261CC345B7007214DE /* Project.swift in Sources */,

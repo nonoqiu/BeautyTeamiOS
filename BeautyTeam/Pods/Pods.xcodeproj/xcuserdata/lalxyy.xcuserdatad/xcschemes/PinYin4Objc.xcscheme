@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36E55A84A9A4B814CF5A861E"
-               BuildableName = "Alamofire_Synchronous.framework"
-               BlueprintName = "Alamofire-Synchronous"
+               BlueprintIdentifier = "C9140E5A3B1E3D2237132DCA"
+               BuildableName = "PinYin4Objc.framework"
+               BlueprintName = "PinYin4Objc"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

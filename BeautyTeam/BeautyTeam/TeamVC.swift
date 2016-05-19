@@ -19,6 +19,8 @@ class TeamVC: UITableViewController {
     override init(style: UITableViewStyle) {
         super.init(style: style)
         
+        
+        
 //        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/Groupsijoined").responseJSON {
 //            resp in
 //            
@@ -39,10 +41,12 @@ class TeamVC: UITableViewController {
             for element in self.GU_Relations {
                 group.background {
                     let resp = Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/GroupDetails/\(element.groupId)").responseJSON()
-                    guard let data = resp.result.value as? Dictionary<String, AnyObject?> else {
+                    guard let data = resp.result.value as? Dictionary<String, AnyObject> else {
+                        print(resp.result.value)
                         fatalError()
                     }
-                    let singleGroup = Group(rawData: data)
+                    let rawData = ObiObject<Group>(rawData: data)
+                    let singleGroup = rawData.object
                     self.groups.append(singleGroup)
                 }
             }
@@ -60,6 +64,9 @@ class TeamVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let debugLogin = Alamofire.request(.POST, ObiBeautyTeam.APIURL + "/Login", parameters: ["Email" : "hkyla@obisoft.com.cn", "Password" : "1234567890"]).responseJSON()
+        
 //        self.view.backgroundColor = UIColor.whiteColor()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -72,7 +79,8 @@ class TeamVC: UITableViewController {
         // Load data
         Async.background {
             let resp = Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/Groupsijoined").responseJSON()
-            guard let rJSON = resp.result.value as? Dictionary<String, AnyObject?> else {
+            print(resp.result.value)
+            guard let rJSON = resp.result.value as? Dictionary<String, AnyObject> else {
                 fatalError()
             }
             // Parse
@@ -82,6 +90,8 @@ class TeamVC: UITableViewController {
             .main {
                 self.getGroupDetailsIntoSelfArray()
         }
+        
+        
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -105,12 +115,15 @@ class TeamVC: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        var cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
+        if (cell == nil) {
+            cell = UITableViewCell(style: .Default, reuseIdentifier: "reuseIdentifier")
+        }
 
         let rowLocation = indexPath.row
-        
+        cell!.textLabel?.text = groups[rowLocation].groupName
 
-        return cell
+        return cell!
     }
     
 
