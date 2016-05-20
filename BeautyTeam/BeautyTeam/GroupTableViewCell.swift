@@ -12,12 +12,29 @@ class GroupTableViewCell: UITableViewCell {
     
     var groupImage: UIImageView?
     var groupNameLabel: UILabel?
-//    var 
+    var groupDetailLabel: UILabel?
     
-    init(reuseIdentifier: String?) {
-        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.groupImage = UIImageView(frame: CGRectMake(10, 10, 20, 20))
         
+        self.groupNameLabel = UILabel(frame: CGRectMake(40, 10, 100, 12))
+        self.groupNameLabel?.font = UIFont.systemFontOfSize(12)
+        
+        self.groupDetailLabel = UILabel(frame: CGRectMake(30, 30, 100, 10))
+        self.groupDetailLabel?.textColor = UIColor.grayColor()
+        self.groupDetailLabel?.font = UIFont.systemFontOfSize(8)
+        
+        self.contentView.addSubview(groupImage!)
+        self.contentView.addSubview(groupNameLabel!)
+        self.contentView.addSubview(groupDetailLabel!)
+    }
+    
+    func assignValue(groupImageURL: NSURL, groupName: String, groupMemberCount: Int) {
+        self.groupImage?.sd_setImageWithURL(groupImageURL)
+        self.groupNameLabel?.text = groupName
+        self.groupDetailLabel?.text = "\(groupMemberCount) People"
     }
     
     required init?(coder aDecoder: NSCoder) {

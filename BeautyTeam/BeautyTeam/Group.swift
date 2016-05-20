@@ -14,7 +14,7 @@ class Group: InitialProtocol {
     var groupDescription: String?
     var groupImageURL: NSURL?
     
-    var groupUserRelation: [GroupUserRelation] = [GroupUserRelation]()
+//    var groupUserRelation: [GroupUserRelation] = [GroupUserRelation]()
     
     required init(rawData: [String : AnyObject?]) {
         guard let groupId = rawData["GroupId"] as? Int else {
@@ -27,16 +27,16 @@ class Group: InitialProtocol {
         guard let groupDescription = rawData["GroupDescription"] as? String else {
             fatalError()
         }
-        guard let groupUserRelation_raw = rawData["GU_Relations"] as? [[String : AnyObject]] else {
-            fatalError()
-        }
+//        guard let groupUserRelation_raw = rawData["GU_Relations"] as? [[String : AnyObject]] else {
+//            fatalError()
+//        }
         
         self.groupId = groupId
         self.groupName = groupName
         self.groupDescription = groupDescription
-        for element in groupUserRelation_raw {
-            self.groupUserRelation.append(GroupUserRelation(rawData: element))
-        }
+//        for element in groupUserRelation_raw {
+//            self.groupUserRelation.append(GroupUserRelation(rawData: element))
+//        }
         
         
         if let groupImageURL_raw = rawData["GroupImage"] as? String {

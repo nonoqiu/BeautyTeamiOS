@@ -14,7 +14,6 @@ import PinYin4Objc
 
 class TeamVC: UITableViewController {
     
-    var GU_Relations = [GroupUserRelation]()
     var groups = [Group]()
 
     override func viewDidLoad() {
@@ -48,7 +47,7 @@ class TeamVC: UITableViewController {
             }
             let res = ObiList<GroupUserRelation>(rawData: dic)
             for element in res.list {
-                
+                self.groups.append(element.group)
             }
             self.tableView.performSelectorOnMainThread(#selector(UITableView.reloadData), withObject: nil, waitUntilDone: false)
         }
@@ -73,15 +72,20 @@ class TeamVC: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
-        if (cell == nil) {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "reuseIdentifier")
-        }
+//        var cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
+//        if (cell == nil) {
+//            cell = UITableViewCell(style: .Default, reuseIdentifier: "reuseIdentifier")
+//        }
+//
+//        let rowLocation = indexPath.row
+//        cell!.textLabel?.text = groups[rowLocation].groupName
+        
+        let groupTVC = tableView.dequeueReusableCellWithIdentifier("GroupTVC", forIndexPath: indexPath) as! GroupTableViewCell
+        let dataElement = groups[indexPath.row]
+        groupTVC.assignValue(dataElement.groupImageURL != nil ? dataElement.groupImageURL! : NSURL(), groupName: dataElement.groupName!, groupMemberCount: 1)
+        return groupTVC
 
-        let rowLocation = indexPath.row
-        cell!.textLabel?.text = groups[rowLocation].groupName
-
-        return cell!
+//        return cell!
     }
     
 
