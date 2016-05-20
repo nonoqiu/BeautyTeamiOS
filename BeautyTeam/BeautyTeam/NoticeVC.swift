@@ -43,18 +43,18 @@ class NoticeVC: UITableViewController, FetchDataFromNetworkProtocol {
     }
     
     func fetchData() {
-        ObiBeautyTeam.checkSignInStatusBeforeHandlingNetwork(after: {
-            Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AllNoticeForMe").responseJSON(completionHandler: {
-                [weak self] resp in
-                
-                guard let JSONdata = resp.result.value as? Dictionary<String, AnyObject?> else {
-                    return
-                }
-                let noticeDataRawNotice = ObiList<INoticable>(rawData: JSONdata)
-                self?.notices = noticeDataRawNotice.list
-                self?.performSelectorOnMainThread(#selector(self?.tableView.reloadData), withObject: nil, waitUntilDone: false)
-            })
-        })
+//        ObiBeautyTeam.checkSignInStatusBeforeHandlingNetwork(after: {
+//            Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AllNoticeForMe").responseJSON(completionHandler: {
+//                [weak self] resp in
+//                
+//                guard let JSONdata = resp.result.value as? Dictionary<String, AnyObject?> else {
+//                    return
+//                }
+//                let noticeDataRawNotice = ObiList<INoticable>(rawData: JSONdata)
+//                self?.notices = noticeDataRawNotice.list
+//                self?.performSelectorOnMainThread(#selector(self?.tableView.reloadData), withObject: nil, waitUntilDone: false)
+//            })
+//        })
     }
 
     override func didReceiveMemoryWarning() {

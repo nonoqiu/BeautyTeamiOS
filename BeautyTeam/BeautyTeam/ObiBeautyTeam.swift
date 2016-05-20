@@ -85,7 +85,7 @@ struct ObiBeautyTeam {
         
     }
     
-    static func silentSignIn(after after: () -> Void) {
+    static func silentSignIn(aSelector: Selector, target: NSObject, withObject: AnyObject?) {
         let userDefault = NSUserDefaults.standardUserDefaults()
         
         let keychain = KeychainSwift()
@@ -121,31 +121,35 @@ struct ObiBeautyTeam {
                     userDefault.synchronize()
                 }
                 
-                after()
+                target.performSelectorOnMainThread(aSelector, withObject: withObject, waitUntilDone: false)
         }
     }
     
-    static func checkSignInStatusBeforeHandlingNetwork(after after: () -> Void) {
+    static func checkSignInStatusBeforeHandlingNetwork(afterSelector: Selector, target: NSObject, withObject: AnyObject?) {
         let userDefault = NSUserDefaults.standardUserDefaults()
         
         Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/loginstatus").responseJSON {
             resp in
-            
-            guard let rawData = resp.result.value as? Dictionary<String, AnyObject?> else {
-                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
-                userDefault.synchronize()
+            print(resp.result.value)
+            guard let rawData = resp.result.value as? Dictionary<String, AnyObject> else {
+//                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+//                userDefault.synchronize()
+                
                 return
             }
             let checkSignIn = ObiValue<Bool>(rawData: rawData)
-            if checkSignIn.statusCode != 200 {
-                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
-                userDefault.synchronize()
-                return
-            }
+//            if checkSignIn.statusCode != 200 {
+//                userDefault.setBool(false, forKey: ObiBeautyTeam.signInSignature)
+//                userDefault.synchronize()
+//                return
+//            }
+            print(checkSignIn.value.description)
             if !checkSignIn.value {
-                ObiBeautyTeam.silentSignIn(after: after)
+                print(checkSignIn.value.description)
+                ObiBeautyTeam.silentSignIn(afterSelector, target: target, withObject: withObject)
             } else {
-                after()
+                print(checkSignIn.value.description)
+                target.performSelectorOnMainThread(afterSelector, withObject: withObject, waitUntilDone: false)
             }
         }
     }

@@ -3,3 +3,4 @@
 //
 
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "PinYin4Objc/PinYin4Objc.h"
