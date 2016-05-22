@@ -13,7 +13,7 @@ class GroupUserRelation: NSObject, InitialProtocol {
     var obisoftUserId: String!
     var groupId: Int!
     var relationType: GroupUserRelationType!
-    var group: Group!
+//    var group: Group!
     
     required init(rawData: [String : AnyObject?]) {
         guard let groupUserRelationId = rawData["GU_RelationId"] as? Int else {
@@ -28,9 +28,9 @@ class GroupUserRelation: NSObject, InitialProtocol {
         guard let relationType_raw = rawData["RelationType"] as? Int else {
             fatalError()
         }
-        guard let group_raw = rawData["Group"] as? Dictionary<String, AnyObject> else {
-            fatalError()
-        }
+//        guard let group_raw = rawData["Group"] as? Dictionary<String, AnyObject> else {
+//            fatalError()
+//        }
         guard let relationType = GroupUserRelationType(rawValue: relationType_raw) else {
             fatalError()
         }
@@ -39,6 +39,6 @@ class GroupUserRelation: NSObject, InitialProtocol {
         self.obisoftUserId = obisoftUserId
         self.groupId = groupId
         self.relationType = relationType
-        self.group = Group(rawData: group_raw)
+//        self.group = Group(rawData: group_raw)
     }
 }

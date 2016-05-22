@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Async
+import Alamofire
+import Alamofire_Synchronous
 
 class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var members = [ObisoftUser]()
+    var members = [GroupUserTableViewModel]()
     
     // Views
     var collectionView: UICollectionView?
@@ -26,6 +29,20 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
         
         self.collectionView = UICollectionView(frame: CGRectMake(2, 2, UIScreen.mainScreen().bounds.width - 4, 300), collectionViewLayout: collectionLayout)
         
+    }
+    
+    func membersReloadData() {
+        Async.background {
+            let group = AsyncGroup()
+            let i = 0
+            while (i < self.members.count) {
+                group.background {
+                    self.members[i].fetchNextDataSynchronous()
+                }
+            }
+        }.main {
+            self.collectionView?.reloadData()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,10 +72,9 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("groupdetail", forIndexPath: indexPath) as! GroupDetailMemberCollectionViewCell
-        let element = members[indexPath.row]
-        
-        cell.nameLabel.text = element.nickName!
-        cell.imageView.sd_setImageWithURL(element.iconImageURL!)
+        let element = members[indexPath.row].user!
+        cell.nameLabel.text = element.nickname
+        cell.imageView.sd_setImageWithURL(element.iconImageURL)
         
         return cell
     }

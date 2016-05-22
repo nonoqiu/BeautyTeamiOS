@@ -24,6 +24,7 @@ class TeamVC: UITableViewController {
         self.tableView.delegate = self
         
         // Right navigator
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TeamVC.goAddGroup))
         
         let debugLogin = Alamofire.request(.POST, ObiBeautyTeam.APIURL + "/Login", parameters: ["Email" : "hkyla@obisoft.com.cn", "Password" : "1234567890"]).responseJSON().result.value as? Dictionary<String, AnyObject>
         print(debugLogin)
@@ -42,7 +43,8 @@ class TeamVC: UITableViewController {
     }
     
     func goAddGroup() {
-        
+        let nextVC = AddGroupTVC(style: .Grouped)
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func dataLoad() {
@@ -53,7 +55,7 @@ class TeamVC: UITableViewController {
                 fatalError()
             }
             print(dic)
-            let res = ObiList<GroupUserRelation>(rawData: dic)
+            let res = ObiList<GU_RelationR>(rawData: dic)
             for element in res.list {
                 self.groups.append(element.group)
             }

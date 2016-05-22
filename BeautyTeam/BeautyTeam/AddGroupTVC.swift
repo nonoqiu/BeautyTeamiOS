@@ -1,5 +1,5 @@
 //
-//  GroupDetailTVC.swift
+//  AddGroupTVC.swift
 //  BeautyTeam
 //
 //  Created by Carl Lee on 5/22/16.
@@ -7,45 +7,19 @@
 //
 
 import UIKit
-import Async
-import Alamofire
-import Alamofire_Synchronous
 
-class GroupDetailTVC: UITableViewController {
-    
-    var group: Group?
-    
-    var firstLineCell = GroupDetailFirstLineTableViewCell(style: .Default, reuseIdentifier: nil)
-    var membersCell = GroupDetailMembersLineTableViewCell(style: .Default, reuseIdentifier: nil)
-    var members_id = [String]()
+class AddGroupTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Detect if self.group is nil
-        guard self.group != nil else {
-            fatalError()
-        }
-        
-        self.navigationItem.title = "Detail"
-        
-        print(group!.groupName!)
-        print(group!.groupImageURL!.description)
-        self.firstLineCell.assignValue(group!.groupName!, ownerName: "Waiting...", adminName: "Waiting...", groupImageURL: group!.groupImageURL!)
+        self.navigationItem.title = "Add Group"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        // Need to get user information using the `GU_Relation`s.
-        Async.background {
-            for i in self.group!.groupUserRelation {
-                self.members_id.append(i.obisoftUserId)
-                
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,37 +31,23 @@ class GroupDetailTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            return self.firstLineCell
-        case 1:
-            return self.membersCell
-        default:
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
+        return cell
     }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 136
-        case 1:
-            return 302
-        default:
-            return 0
-        }
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

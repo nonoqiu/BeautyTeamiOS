@@ -11,6 +11,12 @@
 		1D07BC451CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */; };
 		1D07BC471CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */; };
 		1D07BC491CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC481CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift */; };
+		1D07BC4B1CF1D04E00FABC45 /* GU_RelationR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC4A1CF1D04E00FABC45 /* GU_RelationR.swift */; };
+		1D07BC4D1CF1D51600FABC45 /* AddGroupTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC4C1CF1D51600FABC45 /* AddGroupTVC.swift */; };
+		1D07BC4F1CF1D84B00FABC45 /* GroupUserTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC4E1CF1D84B00FABC45 /* GroupUserTableViewModel.swift */; };
+		1D07BC511CF1DEC300FABC45 /* NetworkReachableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC501CF1DEC300FABC45 /* NetworkReachableViewModelProtocol.swift */; };
+		1D07BC541CF1E00A00FABC45 /* ObisoftAnotherUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC531CF1E00A00FABC45 /* ObisoftAnotherUser.swift */; };
+		1D07BC571CF1E50E00FABC45 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC561CF1E50E00FABC45 /* Invitation.swift */; };
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
 		1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */; };
 		1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D321CC3329900868A68 /* RadioStation.swift */; };
@@ -90,6 +96,12 @@
 		1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailFirstLineTableViewCell.swift; sourceTree = "<group>"; };
 		1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailMembersLineTableViewCell.swift; sourceTree = "<group>"; };
 		1D07BC481CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailMemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D07BC4A1CF1D04E00FABC45 /* GU_RelationR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GU_RelationR.swift; sourceTree = "<group>"; };
+		1D07BC4C1CF1D51600FABC45 /* AddGroupTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupTVC.swift; sourceTree = "<group>"; };
+		1D07BC4E1CF1D84B00FABC45 /* GroupUserTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserTableViewModel.swift; sourceTree = "<group>"; };
+		1D07BC501CF1DEC300FABC45 /* NetworkReachableViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachableViewModelProtocol.swift; sourceTree = "<group>"; };
+		1D07BC531CF1E00A00FABC45 /* ObisoftAnotherUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObisoftAnotherUser.swift; sourceTree = "<group>"; };
+		1D07BC561CF1E50E00FABC45 /* Invitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
 		1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelationType.swift; sourceTree = "<group>"; };
@@ -182,6 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D07BC521CF1DFEA00FABC45 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1D07BC551CF1E4F500FABC45 /* Invitation */,
+				1DC1F7101CC1EB9600A5E9BF /* ObisoftUser.swift */,
+				1D07BC531CF1E00A00FABC45 /* ObisoftAnotherUser.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		1D07BC551CF1E4F500FABC45 /* Invitation */ = {
+			isa = PBXGroup;
+			children = (
+				1D07BC561CF1E50E00FABC45 /* Invitation.swift */,
+			);
+			name = Invitation;
+			sourceTree = "<group>";
+		};
 		1D27FF371CB5D32700D85823 /* BeautyTeamDebug */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +267,7 @@
 				1DEE89C51CE1B2B200FA2D54 /* Elements */,
 				1D80C6D81CC8AC01005D6216 /* TeamVC.swift */,
 				1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */,
+				1D07BC4C1CF1D51600FABC45 /* AddGroupTVC.swift */,
 			);
 			name = Team;
 			sourceTree = "<group>";
@@ -267,11 +298,12 @@
 		1D528BDA1CC0928200A59F92 /* Data Structure */ = {
 			isa = PBXGroup;
 			children = (
+				1D07BC521CF1DFEA00FABC45 /* User */,
 				1DC1F70B1CC1E97D00A5E9BF /* Relationship */,
 				1DC1F7081CC1E85B00A5E9BF /* Team */,
 				1D528BDF1CC0D97200A59F92 /* Notice */,
 				1DC1F70E1CC1EA5400A5E9BF /* InitialProtocol.swift */,
-				1DC1F7101CC1EB9600A5E9BF /* ObisoftUser.swift */,
+				1D07BC501CF1DEC300FABC45 /* NetworkReachableViewModelProtocol.swift */,
 			);
 			name = "Data Structure";
 			sourceTree = "<group>";
@@ -296,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB9F99E1CEF5C07001FF591 /* GroupTableViewModel.swift */,
+				1D07BC4E1CF1D84B00FABC45 /* GroupUserTableViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -318,6 +351,7 @@
 				1DC1F7141CC1ED7800A5E9BF /* TeamEventRelation.swift */,
 				1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */,
 				1D633BCE1CEDE669000CF9EB /* GroupType.swift */,
+				1D07BC4A1CF1D04E00FABC45 /* GU_RelationR.swift */,
 			);
 			name = Relationship;
 			sourceTree = "<group>";
@@ -649,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D07BC4F1CF1D84B00FABC45 /* GroupUserTableViewModel.swift in Sources */,
 				1D4E0F401CCCA93E00BCC415 /* CustomPresentCellProtocol.swift in Sources */,
 				1D80C6D71CC8A9E6005D6216 /* NoticeVC.swift in Sources */,
 				1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */,
@@ -657,7 +692,10 @@
 				1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */,
 				1D56DB271CC7797C00E0F3BA /* AuthModel.swift in Sources */,
 				1D80C6DB1CC8AC12005D6216 /* MainVC.swift in Sources */,
+				1D07BC4D1CF1D51600FABC45 /* AddGroupTVC.swift in Sources */,
+				1D07BC571CF1E50E00FABC45 /* Invitation.swift in Sources */,
 				1DC1F70A1CC1E86B00A5E9BF /* Group.swift in Sources */,
+				1D07BC541CF1E00A00FABC45 /* ObisoftAnotherUser.swift in Sources */,
 				1D633BCF1CEDE669000CF9EB /* GroupType.swift in Sources */,
 				1DB9F99F1CEF5C07001FF591 /* GroupTableViewModel.swift in Sources */,
 				1DC93B281CC3462B007214DE /* GroupEvent.swift in Sources */,
@@ -677,6 +715,7 @@
 				1DDFB4791CAA218700124835 /* BeautyTeam.xcdatamodeld in Sources */,
 				1DDFB4731CAA218700124835 /* ViewController.swift in Sources */,
 				1DC1F7111CC1EB9600A5E9BF /* ObisoftUser.swift in Sources */,
+				1D07BC511CF1DEC300FABC45 /* NetworkReachableViewModelProtocol.swift in Sources */,
 				1D80C6E11CC8B4D5005D6216 /* AddPersonalTaskVC.swift in Sources */,
 				1D80C6DF1CC8B199005D6216 /* NoticeRightNavigationItemPopMenu.swift in Sources */,
 				1D4E0F3A1CCC9BB700BCC415 /* TeamEventCell.swift in Sources */,
@@ -685,6 +724,7 @@
 				1D4C4D371CC3347000868A68 /* RadioEvent.swift in Sources */,
 				1DC93B2A1CC34678007214DE /* GroupTask.swift in Sources */,
 				1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */,
+				1D07BC4B1CF1D04E00FABC45 /* GU_RelationR.swift in Sources */,
 				1D80C6D91CC8AC01005D6216 /* TeamVC.swift in Sources */,
 				1D07BC431CF17F2A00FABC45 /* GroupDetailTVC.swift in Sources */,
 				1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */,
