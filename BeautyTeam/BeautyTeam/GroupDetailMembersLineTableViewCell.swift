@@ -8,13 +8,23 @@
 
 import UIKit
 
-class GroupDetailMembersLineTableViewCell: UITableViewCell {
+class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var members = [ObisoftUser]()
+    
+    // Views
+    var collectionView: UICollectionView?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.collectionView?.registerClass(GroupDetailMemberCollectionViewCell.self, forCellWithReuseIdentifier: "groupdetail")
+        
+        // collectionView
+        let collectionLayout = UICollectionViewFlowLayout()
+        collectionLayout.itemSize = CGSize(width: 63, height: 88)
+        
+        self.collectionView = UICollectionView(frame: CGRectMake(2, 2, UIScreen.mainScreen().bounds.width - 4, 300), collectionViewLayout: collectionLayout)
         
     }
     
@@ -31,6 +41,26 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // MARK: - 
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return members.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("groupdetail", forIndexPath: indexPath) as! GroupDetailMemberCollectionViewCell
+        let element = members[indexPath.row]
+        
+        cell.nameLabel.text = element.nickName!
+        cell.imageView.sd_setImageWithURL(element.iconImageURL!)
+        
+        return cell
     }
 
 }

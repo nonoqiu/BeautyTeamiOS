@@ -10,6 +10,7 @@
 		1D07BC431CF17F2A00FABC45 /* GroupDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */; };
 		1D07BC451CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */; };
 		1D07BC471CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */; };
+		1D07BC491CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC481CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift */; };
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
 		1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */; };
 		1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D321CC3329900868A68 /* RadioStation.swift */; };
@@ -88,6 +89,7 @@
 		1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTVC.swift; sourceTree = "<group>"; };
 		1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailFirstLineTableViewCell.swift; sourceTree = "<group>"; };
 		1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailMembersLineTableViewCell.swift; sourceTree = "<group>"; };
+		1D07BC481CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
 		1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelationType.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */,
 				1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */,
 				1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */,
+				1D07BC481CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift */,
 			);
 			name = Elements;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				1DC93B261CC345B7007214DE /* Project.swift in Sources */,
 				1D56DB2D1CC7B24700E0F3BA /* ObiBeautyTeam.swift in Sources */,
 				1D4E0F361CCC9B9000BCC415 /* RadioStationEventCell.swift in Sources */,
+				1D07BC491CF1A83000FABC45 /* GroupDetailMemberCollectionViewCell.swift in Sources */,
 				1DC1F70D1CC1E9FD00A5E9BF /* GroupUserRelation.swift in Sources */,
 				1D4E0F4D1CCF9AA600BCC415 /* TabContainerVC.swift in Sources */,
 				1DC270861CD8D9C300E57D3B /* FetchDataFromNetworkProtocol.swift in Sources */,

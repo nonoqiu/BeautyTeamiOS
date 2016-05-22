@@ -44,7 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         // Debugging
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        teamNC.navigationController?.navigationBar.barTintColor = UIColor(red: 126/255, green: 211/255, blue: 33/255, alpha: 1)
+        teamVC?.navigationController?.navigationBar.barTintColor = UIColor(red: 126/255, green: 211/255, blue: 33/255, alpha: 1)
+        teamVC?.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont.systemFontOfSize(19)]
+        teamVC?.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.window?.rootViewController = teamNC
         self.window?.makeKeyAndVisible()
         return true

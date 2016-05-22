@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Async
+import Alamofire
+import Alamofire_Synchronous
 
 class GroupDetailTVC: UITableViewController {
     
     var group: Group?
     
     var firstLineCell = GroupDetailFirstLineTableViewCell(style: .Default, reuseIdentifier: nil)
+    var membersCell = GroupDetailMembersLineTableViewCell(style: .Default, reuseIdentifier: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,10 @@ class GroupDetailTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Need to get user information using the `GU_Relation`s.
+        let asyncGroup = AsyncGroup()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +74,8 @@ class GroupDetailTVC: UITableViewController {
         switch indexPath.section {
         case 0:
             return 136
+        case 1:
+            return 302
         default:
             return 0
         }
