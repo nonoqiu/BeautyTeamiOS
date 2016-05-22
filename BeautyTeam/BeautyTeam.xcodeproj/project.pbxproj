@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D07BC431CF17F2A00FABC45 /* GroupDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */; };
+		1D07BC451CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */; };
+		1D07BC471CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */; };
 		1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */; };
 		1D4C4D311CC3286D00868A68 /* GroupUserRelationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */; };
 		1D4C4D331CC3329900868A68 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C4D321CC3329900868A68 /* RadioStation.swift */; };
@@ -82,6 +85,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTVC.swift; sourceTree = "<group>"; };
+		1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailFirstLineTableViewCell.swift; sourceTree = "<group>"; };
+		1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailMembersLineTableViewCell.swift; sourceTree = "<group>"; };
 		1D27FF381CB5D35F00D85823 /* BeautyTeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeautyTeam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D27FF3C1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAllowUntrustedCert.swift; path = BeautyTeam/NetworkAllowUntrustedCert.swift; sourceTree = "<group>"; };
 		1D4C4D301CC3286D00868A68 /* GroupUserRelationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserRelationType.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				1DB9F99D1CEF5BEF001FF591 /* ViewModel */,
 				1DEE89C51CE1B2B200FA2D54 /* Elements */,
 				1D80C6D81CC8AC01005D6216 /* TeamVC.swift */,
+				1D07BC421CF17F2A00FABC45 /* GroupDetailTVC.swift */,
 			);
 			name = Team;
 			sourceTree = "<group>";
@@ -390,9 +397,9 @@
 		1DDFB46F1CAA218700124835 /* BeautyTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1DDFB4701CAA218700124835 /* AppDelegate.swift */,
 				1D528BDA1CC0928200A59F92 /* Data Structure */,
 				1D40B19D1CB8F52E00E3166E /* Modules */,
-				1DDFB4701CAA218700124835 /* AppDelegate.swift */,
 				1DDFB4721CAA218700124835 /* ViewController.swift */,
 				1DDFB4741CAA218700124835 /* Main.storyboard */,
 				1DDFB47A1CAA218700124835 /* Assets.xcassets */,
@@ -431,6 +438,8 @@
 			isa = PBXGroup;
 			children = (
 				1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */,
+				1D07BC441CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift */,
+				1D07BC461CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift */,
 			);
 			name = Elements;
 			sourceTree = "<group>";
@@ -673,14 +682,17 @@
 				1DC93B2A1CC34678007214DE /* GroupTask.swift in Sources */,
 				1DC1F7151CC1ED7800A5E9BF /* TeamEventRelation.swift in Sources */,
 				1D80C6D91CC8AC01005D6216 /* TeamVC.swift in Sources */,
+				1D07BC431CF17F2A00FABC45 /* GroupDetailTVC.swift in Sources */,
 				1D27FF3D1CB5D89800D85823 /* NetworkAllowUntrustedCert.swift in Sources */,
 				1D56DB2B1CC79ED600E0F3BA /* InputTableViewCell.swift in Sources */,
 				1D4E0F381CCC9BA200BCC415 /* TeamTaskCell.swift in Sources */,
 				1D528BE11CC0D9BB00A59F92 /* Event.swift in Sources */,
 				1D4E0F451CCCB44900BCC415 /* CollapseSign.swift in Sources */,
 				1DC1F7171CC1EE4A00A5E9BF /* PersonalTask.swift in Sources */,
+				1D07BC451CF17F9700FABC45 /* GroupDetailFirstLineTableViewCell.swift in Sources */,
 				1D528BDC1CC0946800A59F92 /* ServerReply.swift in Sources */,
 				1DEE89AE1CDCC8AF00FA2D54 /* ObiList.swift in Sources */,
+				1D07BC471CF18E9C00FABC45 /* GroupDetailMembersLineTableViewCell.swift in Sources */,
 				1DC1F70F1CC1EA5400A5E9BF /* InitialProtocol.swift in Sources */,
 				1D80C6E51CC8B4F4005D6216 /* ImportVC.swift in Sources */,
 				1D80C6E31CC8B4E8005D6216 /* AddPersonalEventVC.swift in Sources */,

@@ -45,7 +45,9 @@ class Group: InitialProtocol {
             }
             self.groupImageURL = groupImageURL
         } else if rawData["GroupImage"] is NSNull {
-            self.groupImageURL = nil
+            self.groupImageURL = NSURL(string: "")
+        } else { // Debug
+            self.groupImageURL = NSURL(string: "")
         }
         
     }

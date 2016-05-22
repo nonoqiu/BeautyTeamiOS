@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         // Debugging
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        teamNC.navigationController?.navigationBar.barTintColor = UIColor(red: 126/255, green: 211/255, blue: 33/255, alpha: 1)
         self.window?.rootViewController = teamNC
         self.window?.makeKeyAndVisible()
         return true

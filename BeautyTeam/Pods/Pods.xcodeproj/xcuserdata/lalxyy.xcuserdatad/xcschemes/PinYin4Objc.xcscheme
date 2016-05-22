@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9140E5A3B1E3D2237132DCA"
+               BlueprintIdentifier = "53D9F67E3B493B26FC0A6249"
                BuildableName = "PinYin4Objc.framework"
                BlueprintName = "PinYin4Objc"
                ReferencedContainer = "container:Pods.xcodeproj">

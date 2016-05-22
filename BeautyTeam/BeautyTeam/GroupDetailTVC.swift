@@ -1,65 +1,38 @@
 //
-//  TeamVC.swift
+//  GroupDetailTVC.swift
 //  BeautyTeam
 //
-//  Created by Carl Lee on 4/21/16.
+//  Created by Carl Lee on 5/22/16.
 //  Copyright © 2016 Shenyang Obisoft Technology Co.Ltd. All rights reserved.
 //
 
 import UIKit
-import Async
-import Alamofire
-import Alamofire_Synchronous
-import PinYin4Objc
 
-class TeamVC: UITableViewController {
+class GroupDetailTVC: UITableViewController {
     
-    var groups = [Group]()
+    var group: Group?
+    
+    var firstLineCell = GroupDetailFirstLineTableViewCell(style: .Default, reuseIdentifier: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(GroupTableViewCell.self, forCellReuseIdentifier: "GroupTVC")
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        // Detect if self.group is nil
+        guard self.group != nil else {
+            fatalError()
+        }
         
-        // Right navigator
+        self.navigationItem.title = "Detail"
         
-        let debugLogin = Alamofire.request(.POST, ObiBeautyTeam.APIURL + "/Login", parameters: ["Email" : "hkyla@obisoft.com.cn", "Password" : "1234567890"]).responseJSON().result.value as? Dictionary<String, AnyObject>
-        print(debugLogin)
-        
-//        self.view.backgroundColor = UIColor.whiteColor()
+        print(group!.groupName!)
+        print(group!.groupImageURL!.description)
+        self.firstLineCell.assignValue(group!.groupName!, ownerName: "Waiting...", adminName: "Waiting...", groupImageURL: group!.groupImageURL!)
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        self.navigationItem.title = "Team"
-        
-        ObiBeautyTeam.checkSignInStatusBeforeHandlingNetwork(#selector(TeamVC.dataLoad), target: self, withObject: nil)
-        
-    }
-    
-    func goAddGroup() {
-        
-    }
-    
-    func dataLoad() {
-        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/Groupsijoined").responseJSON {
-            resp in
-            
-            guard let dic = resp.result.value as? Dictionary<String, AnyObject> else {
-                fatalError()
-            }
-            print(dic)
-            let res = ObiList<GroupUserRelation>(rawData: dic)
-            for element in res.list {
-                self.groups.append(element.group)
-            }
-            self.tableView.performSelectorOnMainThread(#selector(UITableView.reloadData), withObject: nil, waitUntilDone: false)
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,41 +43,34 @@ class TeamVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // WARNING: Incomplete implementation, return the number of sections
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.groups.count
+        return 1
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
-        if (cell == nil) {
-            cell = UITableViewCell(style: .Value1, reuseIdentifier: "reuseIdentifier")
+        switch indexPath.section {
+        case 0:
+            return self.firstLineCell
+        default:
+            return UITableViewCell()
         }
-
-        let rowLocation = indexPath.row
-        cell!.textLabel?.text = groups[rowLocation].groupName
-        cell?.accessoryType = .DisclosureIndicator
-        cell?.detailTextLabel?.text = groups[rowLocation].groupDescription
-        
-//        let groupTVC = tableView.dequeueReusableCellWithIdentifier("GroupTVC", forIndexPath: indexPath) as! GroupTableViewCell
-//        let dataElement = groups[indexPath.row]
-//        groupTVC.assignValue(dataElement.groupImageURL != nil ? dataElement.groupImageURL! : NSURL(), groupName: dataElement.groupName!, groupMemberCount: 1)
-//        return groupTVC
-
-        return cell!
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        let detailTVC = GroupDetailTVC(style: .Grouped)
-        detailTVC.group = groups[indexPath.row]
-        self.navigationController?.pushViewController(detailTVC, animated: true)
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 136
+        default:
+            return 0
+        }
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
