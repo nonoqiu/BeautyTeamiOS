@@ -28,6 +28,7 @@ class TeamVC: UITableViewController {
         
         let debugLogin = Alamofire.request(.POST, ObiBeautyTeam.APIURL + "/Login", parameters: ["Email" : "hkyla@obisoft.com.cn", "Password" : "1234567890"]).responseJSON().result.value as? Dictionary<String, AnyObject>
         print(debugLogin)
+        print("=====Login=====")
         
 //        self.view.backgroundColor = UIColor.whiteColor()
         // Uncomment the following line to preserve selection between presentations

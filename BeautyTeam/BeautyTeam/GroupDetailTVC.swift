@@ -43,7 +43,7 @@ class GroupDetailTVC: UITableViewController {
         Async.background {
             for i in self.group!.groupUserRelation {
                 self.members_id.append(i.obisoftUserId)
-                
+                // TODO: Finish members loading in collectionView.
             }
         }
     }
@@ -57,12 +57,12 @@ class GroupDetailTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 1
     }
 
     

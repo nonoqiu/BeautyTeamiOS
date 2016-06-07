@@ -15,6 +15,9 @@ class ServerReply: InitialProtocol {
         guard let statusCode = rawData["StatusCode"] as? Int else {
             fatalError()
         }
+        if statusCode == 500 {
+            fatalError("500 API")
+        }
         self.statusCode = statusCode
     }
 }

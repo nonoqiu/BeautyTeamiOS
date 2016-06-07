@@ -14,6 +14,11 @@ import Alamofire_Synchronous
 class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var members = [GroupUserTableViewModel]()
+    var groupId: Int? {
+        didSet {
+            loadMembers()
+        }
+    }
     
     // Views
     var collectionView: UICollectionView?
@@ -21,17 +26,37 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.collectionView?.registerClass(GroupDetailMemberCollectionViewCell.self, forCellWithReuseIdentifier: "groupdetail")
-        
         // collectionView
         let collectionLayout = UICollectionViewFlowLayout()
         collectionLayout.itemSize = CGSize(width: 63, height: 88)
         
         self.collectionView = UICollectionView(frame: CGRectMake(2, 2, UIScreen.mainScreen().bounds.width - 4, 300), collectionViewLayout: collectionLayout)
+        self.collectionView?.registerClass(GroupDetailMemberCollectionViewCell.self, forCellWithReuseIdentifier: "groupdetail")
+        collectionView?.backgroundColor = UIColor.whiteColor()
+        self.contentView.addSubview(collectionView!)
         
     }
     
+    func loadMembers() {
+        if groupId == nil {
+            return
+        }
+        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/GroupDetails/\(groupId!)").responseJSON {
+            resp in
+            
+            let result = Group(rawData: resp.result.value as! Dictionary<String, AnyObject>)
+            for relation in result.groupUserRelation {
+                self.members.append(GroupUserTableViewModel(ObisoftUserId: relation.obisoftUserId))
+            }
+            self.performSelectorOnMainThread(#selector(GroupDetailMembersLineTableViewCell.membersReloadData), withObject: nil, waitUntilDone: false)
+        }
+    }
+    
     func membersReloadData() {
+        if members.isEmpty {
+            fatalError("members loading error")
+        }
+        
         Async.background {
             let group = AsyncGroup()
             let i = 0

@@ -14,6 +14,10 @@ struct GroupUserTableViewModel: NetworkReachableViewModelProtocol {
     var ObisoftUserId: String?
     var user: ObisoftAnotherUser?
     
+    init(ObisoftUserId: String) {
+        self.ObisoftUserId = ObisoftUserId
+    }
+    
     mutating func fetchNextDataSynchronous() {
         guard ObisoftUserId != nil else {
             return
