@@ -1,6 +1,7 @@
 platform :ios, '8.0'
 use_frameworks!
 
+target 'BeautyTeam' do
 pod 'Alamofire', '~> 3.3.0'
 pod 'KeychainSwift', '~> 3.0.11'
 pod 'SDWebImage', '~> 3.7.5'
@@ -9,3 +10,5 @@ pod 'AsyncSwift', '~> 1.7.2'
 pod 'Alamofire-Synchronous', '~> 3.0.0'
 pod 'PinYin4Objc', '~> 1.1.1'
 pod 'MBProgressHUD', '~> 0.9.2'
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+end

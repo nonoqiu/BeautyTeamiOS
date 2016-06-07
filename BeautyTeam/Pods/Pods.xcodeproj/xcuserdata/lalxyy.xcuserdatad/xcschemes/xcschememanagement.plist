@@ -44,7 +44,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-BeautyTeam.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B39DB2DFAC1F3D63E8B093E1821F0D9</key>
+		<key>1088253F42C36418734CF3D95E31B8AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67C61307D60FD2ED6B4D469901E7A400</key>
+		<key>4C698C648EE4D43C6B8BE0BE1FE91737</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EEF5D34ADA463B0F75AE2FDF06D209B</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77F7BAE2269290BB85157FEA92B3C284</key>
+		<key>9E64D3E3A7AD1A87C822114B7473AE1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9666688CB41B38A9914616144C9C7A3E</key>
+		<key>CC0E727021FE5765DCE27EA07DC3F88E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9ADFC153D5F30A4C05416C25CBE9A6B7</key>
+		<key>D1DC35DB2C695031A72543555FB23729</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CBFC3BE0ED4878E7EE61294FD7C0B11</key>
+		<key>D422564CE5BB2F2875F41A32A88AF10F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA375ECE0467DF8013C9C958CA1CD695</key>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9CCEA7E3BE3DE6971EBAA259F79031D</key>
+		<key>E7FF1AAAF61750E101C83ED70F5ECF82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4F95B90EE5FE93A69CA00BAADE159E8</key>
+		<key>ED4337B1B6E594133A328DEA9437A9A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

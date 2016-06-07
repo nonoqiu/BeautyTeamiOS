@@ -71,7 +71,7 @@
 		1DDFB4941CAA218700124835 /* BeautyTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFB4931CAA218700124835 /* BeautyTeamUITests.swift */; };
 		1DEE89AE1CDCC8AF00FA2D54 /* ObiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */; };
 		1DEE89C71CE1B2D300FA2D54 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */; };
-		8F159BE2A514E4D5AA8BAD3C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CF00446CADCE8A08C53576 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BDAB7AB71A7B6E909A1316AE /* Pods_BeautyTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64DF8EAF222AD328C560134 /* Pods_BeautyTeam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,9 +163,10 @@
 		1DDFB4951CAA218700124835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEE89AD1CDCC8AF00FA2D54 /* ObiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObiList.swift; sourceTree = "<group>"; };
 		1DEE89C61CE1B2D300FA2D54 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		272ABE291043393675767DE3 /* Pods-BeautyTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyTeam.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyTeam/Pods-BeautyTeam.release.xcconfig"; sourceTree = "<group>"; };
 		41CF00446CADCE8A08C53576 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45C54FF83F1C9631CB620EBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		53FCE2A8632C0F3FDE75AC05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5F7061EE50AF57F23CD4F495 /* Pods-BeautyTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautyTeam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautyTeam/Pods-BeautyTeam.debug.xcconfig"; sourceTree = "<group>"; };
+		D64DF8EAF222AD328C560134 /* Pods_BeautyTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautyTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F159BE2A514E4D5AA8BAD3C /* Pods.framework in Frameworks */,
+				BDAB7AB71A7B6E909A1316AE /* Pods_BeautyTeam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +325,13 @@
 			name = Notice;
 			sourceTree = "<group>";
 		};
+		1DA752081D06E2BD00EAA1C8 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
 		1DB9F99D1CEF5BEF001FF591 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,8 +423,8 @@
 				1DDFB4871CAA218700124835 /* BeautyTeamTests */,
 				1DDFB4921CAA218700124835 /* BeautyTeamUITests */,
 				1DDFB46E1CAA218700124835 /* Products */,
-				C53029B016C2C327EEA8CE2C /* Pods */,
 				921148848947FA58EF95082E /* Frameworks */,
+				DE05863D5311174ECE6F6700 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -433,6 +441,7 @@
 		1DDFB46F1CAA218700124835 /* BeautyTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1DA752081D06E2BD00EAA1C8 /* SDK */,
 				1DDFB4701CAA218700124835 /* AppDelegate.swift */,
 				1D528BDA1CC0928200A59F92 /* Data Structure */,
 				1D40B19D1CB8F52E00E3166E /* Modules */,
@@ -485,15 +494,16 @@
 			isa = PBXGroup;
 			children = (
 				41CF00446CADCE8A08C53576 /* Pods.framework */,
+				D64DF8EAF222AD328C560134 /* Pods_BeautyTeam.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C53029B016C2C327EEA8CE2C /* Pods */ = {
+		DE05863D5311174ECE6F6700 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				45C54FF83F1C9631CB620EBB /* Pods.debug.xcconfig */,
-				53FCE2A8632C0F3FDE75AC05 /* Pods.release.xcconfig */,
+				5F7061EE50AF57F23CD4F495 /* Pods-BeautyTeam.debug.xcconfig */,
+				272ABE291043393675767DE3 /* Pods-BeautyTeam.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -505,12 +515,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DDFB4981CAA218700124835 /* Build configuration list for PBXNativeTarget "BeautyTeam" */;
 			buildPhases = (
-				4B708FEFB166521A5600CED2 /* Check Pods Manifest.lock */,
+				BE45333FEA72D215AD657DA4 /* [CP] Check Pods Manifest.lock */,
 				1DDFB4691CAA218700124835 /* Sources */,
 				1DDFB46A1CAA218700124835 /* Frameworks */,
 				1DDFB46B1CAA218700124835 /* Resources */,
-				53CEB2C6AB33501C69DD5CF4 /* Embed Pods Frameworks */,
-				96EDF4B2C680BD126E6A83AC /* Copy Pods Resources */,
+				CB6E2864658BEFC471731F9E /* [CP] Embed Pods Frameworks */,
+				A8653BBC9D07868CE81A0A99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,14 +641,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B708FEFB166521A5600CED2 /* Check Pods Manifest.lock */ = {
+		A8653BBC9D07868CE81A0A99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautyTeam/Pods-BeautyTeam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE45333FEA72D215AD657DA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,34 +671,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		53CEB2C6AB33501C69DD5CF4 /* Embed Pods Frameworks */ = {
+		CB6E2864658BEFC471731F9E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96EDF4B2C680BD126E6A83AC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautyTeam/Pods-BeautyTeam-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -879,14 +889,37 @@
 		};
 		1DDFB4991CAA218700124835 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C54FF83F1C9631CB620EBB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5F7061EE50AF57F23CD4F495 /* Pods-BeautyTeam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeautyTeam",
+				);
 				INFOPLIST_FILE = BeautyTeam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Alamofire_Synchronous\"",
+					"-framework",
+					"\"Async\"",
+					"-framework",
+					"\"FontAwesome_swift\"",
+					"-framework",
+					"\"KeychainSwift\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"PinYin4Objc\"",
+					"-framework",
+					"\"SDWebImage\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.obisoft.BeautyTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeautyTeam-Bridging-Header.h";
@@ -896,11 +929,15 @@
 		};
 		1DDFB49A1CAA218700124835 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53FCE2A8632C0F3FDE75AC05 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 272ABE291043393675767DE3 /* Pods-BeautyTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeautyTeam",
+				);
 				INFOPLIST_FILE = BeautyTeam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
