@@ -34,7 +34,6 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
         self.collectionView?.registerClass(GroupDetailMemberCollectionViewCell.self, forCellWithReuseIdentifier: "groupdetail")
         collectionView?.backgroundColor = UIColor.whiteColor()
         self.contentView.addSubview(collectionView!)
-        
     }
     
     func loadMembers() {
