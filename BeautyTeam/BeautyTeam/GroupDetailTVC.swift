@@ -13,11 +13,13 @@ import Alamofire_Synchronous
 
 class GroupDetailTVC: UITableViewController {
     
+    // @ExternalSet
     var group: Group?
     
     var firstLineCell = GroupDetailFirstLineTableViewCell(style: .Default, reuseIdentifier: nil)
     var membersCell = GroupDetailMembersLineTableViewCell(style: .Default, reuseIdentifier: nil)
     var members_id = [String]()
+    var membersViewModel = Array<GroupUserTableViewModel>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +43,22 @@ class GroupDetailTVC: UITableViewController {
         
         // Need to get user information using the `GU_Relation`s.
         Async.background {
-            for i in self.group!.groupUserRelation {
-                self.members_id.append(i.obisoftUserId)
-                // TODO: Finish members loading in collectionView.
+            for element in self.group!.groupUserRelation {
+                self.membersViewModel.append(GroupUserTableViewModel(ObisoftUserId: element.obisoftUserId))
             }
+            // TODO: Finish members loading in collectionView.
+            let asyncGroup = AsyncGroup()
+            for i in 0..<self.membersViewModel.count {
+                asyncGroup.background {
+                    let respDic = Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/AnotherUser/\(self.membersViewModel[i].ObisoftUserId!)").responseJSON().result.value as! Dictionary<String, AnyObject>
+                    print(respDic)
+                    let res = ObiObject<ObisoftAnotherUser>(rawData: respDic)
+                    self.membersViewModel[i].user = res.object
+                }
+            }
+            asyncGroup.wait()
+            // Assign to down view
+            self.membersCell.members = self.membersViewModel
         }
     }
 

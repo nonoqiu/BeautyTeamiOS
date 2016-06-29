@@ -14,11 +14,6 @@ import Alamofire_Synchronous
 class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var members = [GroupUserTableViewModel]()
-    var groupId: Int? {
-        didSet {
-            loadMembers()
-        }
-    }
     
     // Views
     var collectionView: UICollectionView?
@@ -34,21 +29,6 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
         self.collectionView?.registerClass(GroupDetailMemberCollectionViewCell.self, forCellWithReuseIdentifier: "groupdetail")
         collectionView?.backgroundColor = UIColor.whiteColor()
         self.contentView.addSubview(collectionView!)
-    }
-    
-    func loadMembers() {
-        if groupId == nil {
-            return
-        }
-        Alamofire.request(.GET, ObiBeautyTeam.APIURL + "/GroupDetails/\(groupId!)").responseJSON {
-            resp in
-            
-            let result = Group(rawData: resp.result.value as! Dictionary<String, AnyObject>)
-            for relation in result.groupUserRelation {
-                self.members.append(GroupUserTableViewModel(ObisoftUserId: relation.obisoftUserId))
-            }
-            self.performSelectorOnMainThread(#selector(GroupDetailMembersLineTableViewCell.membersReloadData), withObject: nil, waitUntilDone: false)
-        }
     }
     
     func membersReloadData() {
