@@ -39,7 +39,7 @@ class GroupDetailMembersLineTableViewCell: UITableViewCell, UICollectionViewData
         Async.background {
             let group = AsyncGroup()
             let i = 0
-            while (i < self.members.count) {
+            while i < self.members.count {
                 group.background {
                     self.members[i].fetchNextDataSynchronous()
                 }

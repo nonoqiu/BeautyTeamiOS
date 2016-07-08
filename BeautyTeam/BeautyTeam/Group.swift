@@ -18,7 +18,7 @@ class Group: InitialProtocol {
     
     required init(rawData: [String : AnyObject?]) {
         guard let groupId = rawData["GroupId"] as? Int else {
-            print(rawData["GroupId"]);
+            print(rawData["GroupId"])
             fatalError()
         }
         guard let groupName = rawData["GroupName"] as? String else {

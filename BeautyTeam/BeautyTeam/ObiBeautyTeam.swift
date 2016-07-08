@@ -56,6 +56,7 @@ struct ObiBeautyTeam {
         return NSMakeRange(0, str.characters.count)
     }
     
+    // swiftlint:disable nesting
     static var tabBarControllerOnce: dispatch_once_t = 0
     static func sharedTabBarController() -> UITabBarController {
         struct Static {
@@ -74,6 +75,7 @@ struct ObiBeautyTeam {
         })
         return Static.instance
     }
+    // swiftlint:enable nesting
     
     static var signInSignature: String {
         get {

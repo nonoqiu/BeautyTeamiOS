@@ -29,7 +29,7 @@ class TeamEventCell: UITableViewCell, CustomPresentCellProtocol {
         // 80 227 194
         self.projectImageView = UIImageView(frame: CGRectMake(10, 40, 12, 12))
         self.projectImageView?.image = UIImage.fontAwesomeIconWithName(.Tag, textColor: UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1), size: fontAwesomeSize)
-        self.projectLabel = UILabel(frame: CGRectMake(30, 40, 12,12))
+        self.projectLabel = UILabel(frame: CGRectMake(30, 40, 12, 12))
         self.projectLabel?.textColor = UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1)
         self.projectLabel?.font = UIFont.systemFontOfSize(12)
         
