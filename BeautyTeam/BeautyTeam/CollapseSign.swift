@@ -18,9 +18,11 @@ class CollapseSign: UIImageView {
     
     var status: CollapseSignStatus?
     
+    // swiftlint:disable variable_name
     init(x: CGFloat, y: CGFloat) {
         super.init(frame: CGRectMake(x, y, 15, 8))
     }
+    // swiftlint:enable variable_name
     
     func changeStatus() {
         if self.status == .Expanded /* origin up */ {

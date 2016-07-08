@@ -23,7 +23,7 @@ struct ObiBeautyTeam {
         dateFormatter.dateFormat = "yyyy/mm/dd HH:mm:SS"
         return dateFormatter
     }
-    
+
     static func logError(errorDescription: String) {
         guard let version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String else {
             return

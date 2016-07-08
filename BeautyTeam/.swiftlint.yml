@@ -1,0 +1,13 @@
+disabled_rules: # rule identifiers to exclude from running
+  #- colon
+  #- comma
+  #- control_statement
+  - line_length
+  - trailing_whitespace
+  - legacy_constructor
+
+force_cast: warning
+
+excluded:
+  - Carthage
+  - Pods
