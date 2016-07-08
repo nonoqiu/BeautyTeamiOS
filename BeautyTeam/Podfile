@@ -10,5 +10,6 @@ pod 'AsyncSwift', '~> 1.7.2'
 pod 'Alamofire-Synchronous', '~> 3.0.0'
 pod 'PinYin4Objc', '~> 1.1.1'
 pod 'MBProgressHUD', '~> 0.9.2'
+pod 'SnapKit', '~> 0.15.0'
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 end

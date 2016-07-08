@@ -18,7 +18,7 @@ class GroupDetailTVC: UITableViewController {
     
     var firstLineCell = GroupDetailFirstLineTableViewCell(style: .Default, reuseIdentifier: nil)
     var membersCell = GroupDetailMembersLineTableViewCell(style: .Default, reuseIdentifier: nil)
-    var members_id = [String]()
+    var membersID = [String]()
     var membersViewModel = Array<GroupUserTableViewModel>()
 
     override func viewDidLoad() {

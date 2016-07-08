@@ -11,3 +11,16 @@ force_cast: warning
 excluded:
   - Carthage
   - Pods
+
+variable_name:
+  excluded:
+    - ObisoftUserId
+    - GU_RelationId
+    - ObisoftUsr
+    - GU_Relations
+    - TU_Relations
+    - EU_Relations
+
+type_name:
+  excluded:
+    - GU_RelationR

@@ -11,6 +11,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SnapKit (0.15.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - PinYin4Objc (~> 1.1.1)
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.7.5)
+  - SnapKit (~> 0.15.0)
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
@@ -33,7 +35,8 @@ SPEC CHECKSUMS:
   PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
 
-PODFILE CHECKSUM: 05bb8d60ab6682d44d97bf8b1e83b842a3b819bb
+PODFILE CHECKSUM: 5d198e8c760e6e8dfd17a193af53b36084b154c9
 
 COCOAPODS: 1.0.1
